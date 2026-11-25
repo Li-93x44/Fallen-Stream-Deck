@@ -1,0 +1,1176 @@
+!function(){"use strict";var t={response:null,getEndpointURL:function(t){var e,s="undefined"!=typeof wp&&wp.customize&&wp.customize.settings&&wp.customize.settings.url&&wp.customize.settings.url.self;s?(e=document.createElement("a")).href=wp.customize.settings.url.self:e=document.location,"string"==typeof t&&t.match(/^https?:\/\//)&&((e=document.createElement("a")).href=t);var a="relatedposts=1",r=document.querySelector("#jp-relatedposts");if(!r)return!1;r.hasAttribute("data-exclude")&&(a+="&relatedposts_exclude="+r.getAttribute("data-exclude")),s&&(a+="&jetpackrpcustomize=1");var o=e.pathname;return"/"!==o[0]&&(o="/"+o),""===e.search?o+"?"+a:o+e.search+"&"+a},getAnchor:function(t,e){var s=t.title,a=document.createElement("a");return a.setAttribute("class",e),a.setAttribute("href",t.url),a.setAttribute("title",s),a.setAttribute("data-origin",t.url_meta.origin),a.setAttribute("data-position",t.url_meta.position),""!==t.rel&&a.setAttribute("rel",t.rel),a},cleanHtml:function(t){var e=document.createElement("div");return e.innerHTML=t,e.textContent||e.innerText||""},generateMinimalDiv:function(t,e){var s=this,a=document.createElement("div");return a.setAttribute("class","jp-relatedposts-items jp-relatedposts-items-minimal jp-relatedposts-"+e.layout),t.forEach(function(t,r){var o="jp-relatedposts-post jp-relatedposts-post"+r;t.classes.length>0&&(o+=" "+t.classes.join(" "));var n=document.createElement("p");n.setAttribute("class",o),n.setAttribute("data-post-id",t.id),n.setAttribute("data-post-format",t.format),a.appendChild(n);var i=document.createElement("span");i.setAttribute("class","jp-relatedposts-post-title"),n.appendChild(i);var p=s.getAnchor(t,"jp-relatedposts-post-a");if(i.appendChild(p),p.textContent=s.cleanHtml(t.title),e.showDate){var l=document.createElement("time");l.setAttribute("class","jp-relatedposts-post-date"),l.setAttribute("datetime",t.date),l.textContent=t.date,n.appendChild(l)}if(e.showContext){var c=document.createElement("span");c.setAttribute("class","jp-relatedposts-post-context"),c.textContent=s.cleanHtml(t.context),n.appendChild(c)}}),a},generateVisualDiv:function(t,e){var s=this,a=document.createElement("div");return a.setAttribute("class","jp-relatedposts-items jp-relatedposts-items-visual jp-relatedposts-"+e.layout),t.forEach(function(t,r){var o="jp-relatedposts-post jp-relatedposts-post"+r;t.classes.length>0&&(o+=" "+t.classes.join(" ")),t.img.src?o+=" jp-relatedposts-post-thumbs":o+=" jp-relatedposts-post-nothumbs";var n=document.createElement("div");if(n.setAttribute("class",o),n.setAttribute("data-post-id",t.id),n.setAttribute("data-post-format",t.format),a.appendChild(n),t.img.src){var i=s.getAnchor(t,"jp-relatedposts-post-a");n.appendChild(i);var p=document.createElement("img");p.setAttribute("class","jp-relatedposts-post-img"),p.setAttribute("loading","lazy"),p.setAttribute("src",t.img.src),p.setAttribute("width",t.img.width),p.setAttribute("height",t.img.height),t.img.srcset&&p.setAttribute("srcset",t.img.srcset),t.img.sizes&&p.setAttribute("sizes",t.img.sizes),p.setAttribute("alt",t.img.alt_text),i.appendChild(p)}else{var l=s.getAnchor(t,"jp-relatedposts-post-a jp-relatedposts-post-aoverlay");n.appendChild(l)}var c=document.createElement(related_posts_js_options.post_heading);c.setAttribute("class","jp-relatedposts-post-title"),n.appendChild(c);var d=s.getAnchor(t,"jp-relatedposts-post-a");d.textContent=s.cleanHtml(t.title),c.appendChild(d);var u=document.createElement("p");if(u.setAttribute("class","jp-relatedposts-post-excerpt"),u.textContent=s.cleanHtml(t.excerpt),n.appendChild(u),e.showDate){var m=document.createElement("time");m.setAttribute("class","jp-relatedposts-post-date"),m.setAttribute("datetime",t.date),m.textContent=t.date,n.appendChild(m)}if(e.showContext){var h=document.createElement("p");h.setAttribute("class","jp-relatedposts-post-context"),h.textContent=s.cleanHtml(t.context),n.appendChild(h)}}),a},setVisualExcerptHeights:function(){var t=document.querySelectorAll("#jp-relatedposts .jp-relatedposts-post-nothumbs .jp-relatedposts-post-excerpt");if(t.length)for(var e=getComputedStyle(t[0]),s=parseInt(e.fontSize,10),a=parseInt(e.lineHeight,10),r=0;r<t.length;r++)t[r].style.maxHeight=5*a/s+"em"},getTrackedUrl:function(t){var e="relatedposts_hit=1";e+="&relatedposts_origin="+t.getAttribute("data-origin"),e+="&relatedposts_position="+t.getAttribute("data-position");var s=t.pathname;return"/"!==s[0]&&(s="/"+s),""===t.search?s+"?"+e:s+t.search+"&"+e},cleanupTrackedUrl:function(){if("function"==typeof history.replaceState){var t=document.location.search.replace(/\brelatedposts_[a-z]+=[0-9]*&?\b/gi,"");"?"===t&&(t=""),document.location.search!==t&&history.replaceState({},document.title,document.location.pathname+t)}}};function e(){t.setVisualExcerptHeights();var e=document.querySelectorAll("#jp-relatedposts a.jp-relatedposts-post-a");Array.prototype.forEach.call(e,function(e){document.addEventListener("click",function(){e.href=t.getTrackedUrl(e)})})}function s(){t.cleanupTrackedUrl();var s=t.getEndpointURL();if(s)if(document.querySelectorAll("#jp-relatedposts .jp-relatedposts-post").length)e();else{var a=document.querySelector("#jp-relatedposts"),r=new XMLHttpRequest;r.open("GET",s,!0),r.setRequestHeader("x-requested-with","XMLHttpRequest"),r.onreadystatechange=function(){if(this.readyState===XMLHttpRequest.DONE&&200===this.status)try{var s=JSON.parse(r.responseText);if(0===s.items.length||0===a.length)return;t.response=s;var o,n={};"undefined"!=typeof wp&&wp.customize?(o=wp.customize.instance("jetpack_relatedposts[show_thumbnails]").get(),n.showDate=wp.customize.instance("jetpack_relatedposts[show_date]").get(),n.showContext=wp.customize.instance("jetpack_relatedposts[show_context]").get(),n.layout=wp.customize.instance("jetpack_relatedposts[layout]").get()):(o=s.show_thumbnails,n.showDate=s.show_date,n.showContext=s.show_context,n.layout=s.layout);var i=o?t.generateVisualDiv(s.items,n):t.generateMinimalDiv(s.items,n);if(a.appendChild(i),n.showDate){var p=a.querySelectorAll(".jp-relatedposts-post-date");Array.prototype.forEach.call(p,function(t){t.style.display="block"})}a.style.display="block",e()}catch{}},r.send()}}function a(){"undefined"!=typeof wp&&wp.customize?(wp.customize.selectiveRefresh&&wp.customize.selectiveRefresh.bind("partial-content-rendered",function(t){"jetpack_relatedposts"===t.partial.id&&s()}),wp.customize.bind("preview-ready",s)):s()}"loading"!==document.readyState?a():document.addEventListener("DOMContentLoaded",a)}();;
+// listen for rlt authentication events and pass them to children of this document.
+( function() {
+	var currentToken;
+	var parentOrigin;
+	var iframeOrigins;
+	var registeredIframes = [];
+	var initializationListeners = [];
+	var hasBeenInitialized = false;
+	var RLT_KEY = 'jetpack:wpcomRLT';
+
+	// should we inject RLT into this iframe?
+	function rltShouldAuthorizeIframe( frameOrigin ) {
+		if ( ! Array.isArray( iframeOrigins ) ) {
+			return false;
+		}
+		return iframeOrigins.includes( frameOrigin );
+	}
+
+	function rltInvalidateWindowToken( token, target, origin ) {
+		if ( target && typeof target.postMessage === 'function' ) {
+			try {
+				target.postMessage( JSON.stringify( {
+					type: 'rltMessage',
+					data: {
+						event: 'invalidate',
+						token: token,
+						sourceOrigin: window.location.origin,
+					},
+				} ), origin );
+			} catch ( err ) {
+				return;
+			}
+		}
+	}
+
+	/**
+	 * PUBLIC METHODS
+	 */
+	window.rltInvalidateToken = function( token, sourceOrigin ) {
+		// invalidate in current context
+		if ( token === currentToken ) {
+			currentToken = null;
+		}
+
+		// remove from localstorage, but only if in a top level window, not iframe
+		try {
+			if ( window.location === window.parent.location && window.localStorage ) {
+				if ( window.localStorage.getItem(RLT_KEY) === token ) {
+					window.localStorage.removeItem(RLT_KEY);
+				}
+			}
+		} catch( e ) {
+			console.info("localstorage access for invalidate denied - probably blocked third-party access", window.location.href);
+		}
+
+		// invalidate in registered iframes
+		for ( const [ frameOrigin, frameWindow ] of registeredIframes ) {
+			if ( frameOrigin !== sourceOrigin ) {
+				rltInvalidateWindowToken( token, frameWindow, frameOrigin );
+			}
+		}
+
+		// invalidate in parent
+		if ( parentOrigin && parentOrigin !== sourceOrigin && window.parent ) {
+			rltInvalidateWindowToken( token, window.parent, parentOrigin );
+		}
+	}
+
+	window.rltInjectToken = function( token, target, origin ) {
+		if ( target && typeof target.postMessage === 'function' ) {
+			try {
+				target.postMessage( JSON.stringify( {
+					type: 'loginMessage',
+					data: {
+						event: 'login',
+						success: true,
+						type: 'rlt',
+						token: token,
+						sourceOrigin: window.location.origin,
+					},
+				} ), origin );
+			} catch ( err ) {
+				return;
+			}
+		}
+	};
+
+	window.rltIsAuthenticated = function() {
+		return !! currentToken;
+	};
+
+	window.rltGetToken = function() {
+		return currentToken;
+	};
+
+	window.rltAddInitializationListener = function( listener ) {
+		// if RLT is already initialized, call the listener immediately
+		if ( hasBeenInitialized ) {
+			listener( currentToken );
+		} else {
+			initializationListeners.push( listener );
+		}
+	};
+
+	// store the token in localStorage
+	window.rltStoreToken = function( token ) {
+		currentToken = token;
+		try {
+			if ( window.location === window.parent.location && window.localStorage ) {
+				window.localStorage.setItem( RLT_KEY, token );
+			}
+		} catch( e ) {
+			console.info("localstorage access denied - probably blocked third-party access", window.location.href);
+		}
+	}
+
+	window.rltInitialize = function( config ) {
+		if ( ! config || typeof window.postMessage !== 'function' ) {
+			return;
+		}
+
+		currentToken  = config.token;
+		iframeOrigins = config.iframeOrigins;
+		parentOrigin  = config.parentOrigin; // needed?
+
+		// load token from localStorage if possible, but only in top level window
+		try {
+			if ( ! currentToken && window.location === window.parent.location && window.localStorage ) {
+				currentToken = window.localStorage.getItem(RLT_KEY);
+			}
+		} catch( e ) {
+			console.info("localstorage access denied - probably blocked third-party access", window.location.href);
+		}
+
+		// listen for RLT events from approved origins
+		window.addEventListener( 'message', function( e ) {
+			var message = e && e.data;
+			if ( typeof message === 'string' ) {
+				try {
+					message = JSON.parse( message );
+				} catch ( err ) {
+					return;
+				}
+			}
+
+			var type = message && message.type;
+			var data = message && message.data;
+
+			if ( type === 'loginMessage' ) {
+				if ( data && data.type === 'rlt' && data.token !== currentToken ) {
+					// put into localStorage if running in top-level window (not iframe)
+					rltStoreToken( data.token );
+
+					// send to registered iframes
+					for ( const [ frameOrigin, frameWindow ] of registeredIframes ) {
+						rltInjectToken( currentToken, frameWindow, frameOrigin );
+					}
+
+					// send to the parent, unless the event was sent _by_ the parent
+					if ( parentOrigin && parentOrigin !== data.sourceOrigin && window.parent ) {
+						rltInjectToken( currentToken, window.parent, parentOrigin );
+					}
+				}
+			}
+
+			if ( type === 'rltMessage' ) {
+				if ( data && data.event === 'invalidate' && data.token === currentToken ) {
+					rltInvalidateToken( data.token );
+				}
+
+				if ( data && data.event === 'register' ) {
+					if ( rltShouldAuthorizeIframe( e.origin ) ) {
+						registeredIframes.push( [ e.origin, e.source ] );
+						if ( currentToken ) {
+							rltInjectToken( currentToken, e.source, e.origin );
+						}
+					}
+				}
+			}
+		} );
+
+		initializationListeners.forEach( function( listener ) {
+			listener( currentToken );
+		} );
+
+		initializationListeners = [];
+
+		// inform the parent that we are ready to receive the RLT token
+		window.parent.postMessage( {
+			type: 'rltMessage',
+			data: {
+				event: 'register'
+			},
+		}, '*' );
+
+		hasBeenInitialized = true;
+	};
+} )();
+;
+/**
+* @preserve HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+*/
+;(function(window, document) {
+/*jshint evil:true */
+  /** version */
+  var version = '3.7.3';
+
+  /** Preset options */
+  var options = window.html5 || {};
+
+  /** Used to skip problem elements */
+  var reSkip = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i;
+
+  /** Not all elements can be cloned in IE **/
+  var saveClones = /^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i;
+
+  /** Detect whether the browser supports default html5 styles */
+  var supportsHtml5Styles;
+
+  /** Name of the expando, to work with multiple documents or to re-shiv one document */
+  var expando = '_html5shiv';
+
+  /** The id for the the documents expando */
+  var expanID = 0;
+
+  /** Cached data for each document */
+  var expandoData = {};
+
+  /** Detect whether the browser supports unknown elements */
+  var supportsUnknownElements;
+
+  (function() {
+    try {
+        var a = document.createElement('a');
+        a.innerHTML = '<xyz></xyz>';
+        //if the hidden property is implemented we can assume, that the browser supports basic HTML5 Styles
+        supportsHtml5Styles = ('hidden' in a);
+
+        supportsUnknownElements = a.childNodes.length == 1 || (function() {
+          // assign a false positive if unable to shiv
+          (document.createElement)('a');
+          var frag = document.createDocumentFragment();
+          return (
+            typeof frag.cloneNode == 'undefined' ||
+            typeof frag.createDocumentFragment == 'undefined' ||
+            typeof frag.createElement == 'undefined'
+          );
+        }());
+    } catch(e) {
+      // assign a false positive if detection fails => unable to shiv
+      supportsHtml5Styles = true;
+      supportsUnknownElements = true;
+    }
+
+  }());
+
+  /*--------------------------------------------------------------------------*/
+
+  /**
+   * Creates a style sheet with the given CSS text and adds it to the document.
+   * @private
+   * @param {Document} ownerDocument The document.
+   * @param {String} cssText The CSS text.
+   * @returns {StyleSheet} The style element.
+   */
+  function addStyleSheet(ownerDocument, cssText) {
+    var p = ownerDocument.createElement('p'),
+        parent = ownerDocument.getElementsByTagName('head')[0] || ownerDocument.documentElement;
+
+    p.innerHTML = 'x<style>' + cssText + '</style>';
+    return parent.insertBefore(p.lastChild, parent.firstChild);
+  }
+
+  /**
+   * Returns the value of `html5.elements` as an array.
+   * @private
+   * @returns {Array} An array of shived element node names.
+   */
+  function getElements() {
+    var elements = html5.elements;
+    return typeof elements == 'string' ? elements.split(' ') : elements;
+  }
+
+  /**
+   * Extends the built-in list of html5 elements
+   * @memberOf html5
+   * @param {String|Array} newElements whitespace separated list or array of new element names to shiv
+   * @param {Document} ownerDocument The context document.
+   */
+  function addElements(newElements, ownerDocument) {
+    var elements = html5.elements;
+    if(typeof elements != 'string'){
+      elements = elements.join(' ');
+    }
+    if(typeof newElements != 'string'){
+      newElements = newElements.join(' ');
+    }
+    html5.elements = elements +' '+ newElements;
+    shivDocument(ownerDocument);
+  }
+
+   /**
+   * Returns the data associated to the given document
+   * @private
+   * @param {Document} ownerDocument The document.
+   * @returns {Object} An object of data.
+   */
+  function getExpandoData(ownerDocument) {
+    var data = expandoData[ownerDocument[expando]];
+    if (!data) {
+        data = {};
+        expanID++;
+        ownerDocument[expando] = expanID;
+        expandoData[expanID] = data;
+    }
+    return data;
+  }
+
+  /**
+   * returns a shived element for the given nodeName and document
+   * @memberOf html5
+   * @param {String} nodeName name of the element
+   * @param {Document|DocumentFragment} ownerDocument The context document.
+   * @returns {Object} The shived element.
+   */
+  function createElement(nodeName, ownerDocument, data){
+    if (!ownerDocument) {
+        ownerDocument = document;
+    }
+    if(supportsUnknownElements){
+        return ownerDocument.createElement(nodeName);
+    }
+    if (!data) {
+        data = getExpandoData(ownerDocument);
+    }
+    var node;
+
+    if (data.cache[nodeName]) {
+        node = data.cache[nodeName].cloneNode();
+    } else if (saveClones.test(nodeName)) {
+        node = (data.cache[nodeName] = data.createElem(nodeName)).cloneNode();
+    } else {
+        node = data.createElem(nodeName);
+    }
+
+    // Avoid adding some elements to fragments in IE < 9 because
+    // * Attributes like `name` or `type` cannot be set/changed once an element
+    //   is inserted into a document/fragment
+    // * Link elements with `src` attributes that are inaccessible, as with
+    //   a 403 response, will cause the tab/window to crash
+    // * Script elements appended to fragments will execute when their `src`
+    //   or `text` property is set
+    return node.canHaveChildren && !reSkip.test(nodeName) && !node.tagUrn ? data.frag.appendChild(node) : node;
+  }
+
+  /**
+   * returns a shived DocumentFragment for the given document
+   * @memberOf html5
+   * @param {Document} ownerDocument The context document.
+   * @returns {Object} The shived DocumentFragment.
+   */
+  function createDocumentFragment(ownerDocument, data){
+    if (!ownerDocument) {
+        ownerDocument = document;
+    }
+    if(supportsUnknownElements){
+        return ownerDocument.createDocumentFragment();
+    }
+    data = data || getExpandoData(ownerDocument);
+    var clone = data.frag.cloneNode(),
+        i = 0,
+        elems = getElements(),
+        l = elems.length;
+    for(;i<l;i++){
+        clone.createElement(elems[i]);
+    }
+    return clone;
+  }
+
+  /**
+   * Shivs the `createElement` and `createDocumentFragment` methods of the document.
+   * @private
+   * @param {Document|DocumentFragment} ownerDocument The document.
+   * @param {Object} data of the document.
+   */
+  function shivMethods(ownerDocument, data) {
+    if (!data.cache) {
+        data.cache = {};
+        data.createElem = ownerDocument.createElement;
+        data.createFrag = ownerDocument.createDocumentFragment;
+        data.frag = data.createFrag();
+    }
+
+
+    ownerDocument.createElement = function(nodeName) {
+      //abort shiv
+      if (!html5.shivMethods) {
+          return data.createElem(nodeName);
+      }
+      return createElement(nodeName, ownerDocument, data);
+    };
+
+    ownerDocument.createDocumentFragment = Function('h,f', 'return function(){' +
+      'var n=f.cloneNode(),c=n.createElement;' +
+      'h.shivMethods&&(' +
+        // unroll the `createElement` calls
+        getElements().join().replace(/[\w\-:]+/g, function(nodeName) {
+          data.createElem(nodeName);
+          data.frag.createElement(nodeName);
+          return 'c("' + nodeName + '")';
+        }) +
+      ');return n}'
+    )(html5, data.frag);
+  }
+
+  /*--------------------------------------------------------------------------*/
+
+  /**
+   * Shivs the given document.
+   * @memberOf html5
+   * @param {Document} ownerDocument The document to shiv.
+   * @returns {Document} The shived document.
+   */
+  function shivDocument(ownerDocument) {
+    if (!ownerDocument) {
+        ownerDocument = document;
+    }
+    var data = getExpandoData(ownerDocument);
+
+    if (html5.shivCSS && !supportsHtml5Styles && !data.hasCSS) {
+      data.hasCSS = !!addStyleSheet(ownerDocument,
+        // corrects block display not defined in IE6/7/8/9
+        'article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}' +
+        // adds styling not present in IE6/7/8/9
+        'mark{background:#FF0;color:#000}' +
+        // hides non-rendered elements
+        'template{display:none}'
+      );
+    }
+    if (!supportsUnknownElements) {
+      shivMethods(ownerDocument, data);
+    }
+    return ownerDocument;
+  }
+
+  /*--------------------------------------------------------------------------*/
+
+  /**
+   * The `html5` object is exposed so that more elements can be shived and
+   * existing shiving can be detected on iframes.
+   * @type Object
+   * @example
+   *
+   * // options can be changed before the script is included
+   * html5 = { 'elements': 'mark section', 'shivCSS': false, 'shivMethods': false };
+   */
+  var html5 = {
+
+    /**
+     * An array or space separated string of node names of the elements to shiv.
+     * @memberOf html5
+     * @type Array|String
+     */
+    'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output picture progress section summary template time video',
+
+    /**
+     * current version of html5shiv
+     */
+    'version': version,
+
+    /**
+     * A flag to indicate that the HTML5 style sheet should be inserted.
+     * @memberOf html5
+     * @type Boolean
+     */
+    'shivCSS': (options.shivCSS !== false),
+
+    /**
+     * Is equal to true if a browser supports creating unknown/HTML5 elements
+     * @memberOf html5
+     * @type boolean
+     */
+    'supportsUnknownElements': supportsUnknownElements,
+
+    /**
+     * A flag to indicate that the document's `createElement` and `createDocumentFragment`
+     * methods should be overwritten.
+     * @memberOf html5
+     * @type Boolean
+     */
+    'shivMethods': (options.shivMethods !== false),
+
+    /**
+     * A string to describe the type of `html5` object ("default" or "default print").
+     * @memberOf html5
+     * @type String
+     */
+    'type': 'default',
+
+    // shivs the document according to the specified `html5` object options
+    'shivDocument': shivDocument,
+
+    //creates a shived element
+    createElement: createElement,
+
+    //creates a shived documentFragment
+    createDocumentFragment: createDocumentFragment,
+
+    //extends list of elements
+    addElements: addElements
+  };
+
+  /*--------------------------------------------------------------------------*/
+
+  // expose html5
+  window.html5 = html5;
+
+  // shiv the document
+  shivDocument(document);
+
+  if(typeof module == 'object' && module.exports){
+    module.exports = html5;
+  }
+
+}(typeof window !== "undefined" ? window : this, document));;
+!function(){"use strict";window.wpNotesCommon=window.wpNotesCommon||{noteType2Noticon:{like:"like",follow:"follow",comment_like:"like",comment:"comment",comment_pingback:"external",reblog:"reblog",like_milestone_achievement:"trophy",achieve_followed_milestone_note:"trophy",achieve_user_anniversary:"trophy",best_liked_day_feat:"milestone",best_followed_day_feat:"milestone",automattician_achievement:"trophy",expired_domain_alert:"alert",automattcher:"atsign"},bumpStat:function(e,t){window.wpNotesIsJetpackClient&&["notes-menu-impressions","notes-menu-clicks"].includes(e)&&(t=t.replace(/(,|$)/g,"-jetpack$1")),(new Image).src=`${document.location.protocol}//pixel.wp.com/g.gif?v=wpcom-no-pv&x_${e}=${t}&baba=${Math.random()}`},getKeycode:function(e){if(!0===e.ctrlKey||!0===e.altKey||!0===e.metaKey)return!1;let t=e.composedPath&&e.composedPath()[0]||e.target;t&&3===t.nodeType&&(t=t.parentNode);const o=t&&t.tagName;return(!e.keyCode||"INPUT"!==o&&"TEXTAREA"!==o&&"SELECT"!==o)&&((!e.keyCode||!t||!t.isContentEditable&&!t.editContext)&&((!e.keyCode||!t||"editor-canvas"!==t.name)&&e.keyCode))}}}();
+;
+( function () {
+	if ( typeof wpcom === 'undefined' ) {
+		window.wpcom = {};
+	}
+
+	if ( ! window.wpNotesArgs ) {
+		console.warn( 'Missing data from PHP (wpNotesArgs).' );
+	}
+	const wpNotesArgs = window.wpNotesArgs || {};
+	// The main cache buster _should_ always be defined.
+	const cacheBuster = wpNotesArgs.cacheBuster || 'none';
+	let iframeLoaded = false;
+	let iframeUrl = wpNotesArgs.iframeUrl;
+	let iframeAppend = wpNotesArgs.iframeAppend || '';
+	let iframeScroll = wpNotesArgs.iframeScroll || 'no';
+	let wideScreen = wpNotesArgs.wide || false;
+
+	let iframePanelId;
+	let iframeFrameId;
+
+	class WPNTView {
+		constructor() {
+			this.el = document.querySelector( '#wp-admin-bar-notes' );
+
+			if ( ! this.el ) {
+				return;
+			}
+
+			// If notes icon markup contains a span with the class "noticon-bell", add a class to the parent li
+			// This allows us to change the icon in the admin bar while maintaining backwards compatibility with older notification icon
+			if ( this.el.querySelector( '.noticon-bell' ) ) {
+				this.el.classList.add( 'bell' );
+			} else {
+				this.el.classList.add( 'notification' );
+			}
+
+			this.hasUnseen = null;
+			this.initialLoad = true;
+			this.count = null;
+			this.iframe = null;
+			this.iframeWindow = null;
+			this.messageQ = [];
+			this.iframeSpinnerShown = false;
+			this.isJetpack = false;
+			this.linkAccountsURL = false;
+			this.currentMasterbarActive = undefined;
+
+			// Don't break notifications if jquery.spin isn't available.
+			// TODO: Remove once notes-common-v2.js no longer depends on jQuery spin.
+			if ( window.jQuery && window.jQuery.fn && ! window.jQuery.fn.spin ) {
+				window.jQuery.fn.spin = () => {};
+			}
+
+			const adminbar = document.querySelector( '#wpadminbar' );
+			this.isRtl = adminbar && adminbar.classList.contains( 'rtl' );
+			this.count = document.querySelector( '#wpnt-notes-unread-count' );
+			this.panel = document.querySelector( `#${ iframePanelId }` );
+
+			if ( ! this.count || ! this.panel ) {
+				return;
+			}
+
+			this.hasUnseen = this.count.classList.contains( 'wpn-unread' );
+			if ( window.wpNotesIsJetpackClient ) {
+				this.isJetpack = true;
+			}
+			if ( this.isJetpack && typeof window.wpNotesLinkAccountsURL !== 'undefined' ) {
+				this.linkAccountsURL = window.wpNotesLinkAccountsURL;
+			}
+
+			const handleItemInput = ( e ) => {
+				e.preventDefault();
+				this.togglePanel();
+			};
+
+			this.el.querySelectorAll( '.ab-item' ).forEach( ( el ) => {
+				el.addEventListener( 'click', handleItemInput );
+				el.addEventListener( 'touchstart', handleItemInput, { passive: false } );
+			} );
+
+			if ( iframeAppend === '2' ) {
+				if ( typeof document.hidden !== 'undefined' ) {
+					document.addEventListener( 'visibilitychange', () => {
+						this.postMessage( {
+							action: 'toggleVisibility',
+							hidden: document.hidden,
+						} );
+					} );
+				}
+			}
+
+			// Click outside the panel to close the panel.
+			const handleMouseDownAndFocus = ( e ) => {
+				// Don't fire if the panel isn't showing
+				if ( ! this.showingPanel ) {
+					return true;
+				}
+
+				const clicked = e.target;
+
+				/**
+				 * Don't fire if there's no real click target
+				 * Prevents Firefox issue described here: http://datap2.wordpress.com/2013/08/15/running-in-to-some-strange/
+				 */
+				if ( clicked === document || clicked === document.documentElement ) {
+					return true;
+				}
+
+				// Don't fire on clicks in the panel.
+				if ( clicked.closest( '#wp-admin-bar-notes' ) ) {
+					return true;
+				}
+
+				this.hidePanel();
+				return false;
+			};
+
+			document.addEventListener( 'mousedown', handleMouseDownAndFocus );
+			document.addEventListener( 'focus', handleMouseDownAndFocus );
+
+			document.addEventListener( 'keydown', ( e ) => {
+				const keyCode = window.wpNotesCommon.getKeycode( e );
+				if ( ! keyCode ) {
+					return;
+				}
+
+				if ( keyCode === 27 ) {
+					// ESC close only
+					this.hidePanel();
+				}
+				if ( keyCode === 78 ) {
+					// n open/close
+					this.togglePanel();
+				}
+
+				// Ignore other commands if the iframe hasn't been loaded yet
+				if ( this.iframeWindow === null ) {
+					return;
+				}
+
+				if ( this.showingPanel ) {
+					if ( keyCode === 74 || keyCode === 40 ) {
+						// j and down arrow
+						this.postMessage( { action: 'selectNextNote' } );
+						e.preventDefault();
+					}
+
+					if ( keyCode === 75 || keyCode === 38 ) {
+						// k and up arrow
+						this.postMessage( { action: 'selectPrevNote' } );
+						e.preventDefault();
+					}
+
+					if ( keyCode === 82 || keyCode === 65 || keyCode === 83 || keyCode === 84 ) {
+						// mod keys (r,a,s,t) to pass to iframe
+						this.postMessage( { action: 'keyEvent', keyCode } );
+						e.preventDefault();
+					}
+				}
+			} );
+
+			// Listen to `notes:togglePanel` event from legacy Backbone systems.
+			if ( window.wpcom.events && window.wpcom.events.on ) {
+				window.wpcom.events.on( 'notes:togglePanel', () => this.togglePanel() );
+			}
+
+			if ( this.isJetpack ) {
+				this.loadIframe();
+			} else {
+				setTimeout( () => this.loadIframe(), 3000 );
+			}
+
+			if ( this.count.classList.contains( 'wpn-unread' ) ) {
+				window.wpNotesCommon.bumpStat( 'notes-menu-impressions', 'non-zero' );
+			} else {
+				window.wpNotesCommon.bumpStat( 'notes-menu-impressions', 'zero' );
+			}
+
+			// Listen for postMessage events from the iframe.
+			window.addEventListener( 'message', ( event ) => {
+				if ( event.origin !== 'https://wordpress.com' ) {
+					return;
+				}
+				try {
+					const data = typeof event.data === 'string' ? JSON.parse( event.data ) : event.data;
+
+					if ( data.type !== 'notesIframeMessage' ) {
+						return;
+					}
+					this.handleEvent( data );
+				} catch ( e ) {
+					// Do nothing.
+				}
+			} );
+		}
+
+		handleEvent( event ) {
+			if ( ! event || ! event.action ) {
+				return;
+			}
+
+			switch ( event.action ) {
+				case 'togglePanel':
+					this.togglePanel();
+					break;
+				case 'render':
+					this.render( event.num_new, event.latest_type );
+					break;
+				case 'renderAllSeen':
+					this.renderAllSeen();
+					break;
+				case 'iFrameReady':
+					this.iFrameReady( event );
+					break;
+				case 'widescreen': {
+					const iframe = document.querySelector( `#${ iframeFrameId }` );
+					if ( iframe ) {
+						if ( event.widescreen && ! iframe.classList.contains( 'widescreen' ) ) {
+							iframe.classList.add( 'widescreen' );
+						} else if ( ! event.widescreen && iframe.classList.contains( 'widescreen' ) ) {
+							iframe.classList.remove( 'widescreen' );
+						}
+					}
+					break;
+				}
+			}
+		}
+
+		render( numNew, latestType ) {
+			if ( this.hasUnseen === false && numNew === 0 ) {
+				return;
+			}
+
+			// Assume the icon is correct on initial load.
+			if ( this.initialLoad && this.hasUnseen && numNew !== 0 ) {
+				this.initialLoad = false;
+				return;
+			}
+
+			if ( ! this.hasUnseen && numNew !== 0 ) {
+				window.wpNotesCommon.bumpStat( 'notes-menu-impressions', 'non-zero-async' );
+			}
+
+			let latestIconType = window.wpNotesCommon.noteType2Noticon[ latestType ];
+			if ( ! latestIconType ) {
+				latestIconType = 'notification';
+			}
+
+			this.count.innerHTML = '';
+
+			if ( numNew === 0 || this.showingPanel ) {
+				this.hasUnseen = false;
+				this.count.classList.remove( 'wpn-unread' );
+				this.count.classList.add( 'wpn-read' );
+				this.count.appendChild( this.getStatusIcon( numNew ) );
+
+				if ( window.wpcom.masterbar ) {
+					window.wpcom.masterbar.hasUnreadNotifications( false );
+				}
+			} else {
+				this.hasUnseen = true;
+				this.count.classList.remove( 'wpn-read' );
+				this.count.classList.add( 'wpn-unread' );
+				this.count.appendChild( this.getStatusIcon( null, latestIconType ) );
+
+				if ( window.wpcom.masterbar ) {
+					window.wpcom.masterbar.hasUnreadNotifications( true );
+				}
+			}
+		}
+
+		renderAllSeen() {
+			if ( ! this.hasToggledPanel ) {
+				return;
+			}
+
+			this.render( 0 );
+		}
+
+		getStatusIcon( number, alt = null ) {
+			// Changing `number` once produced different icons, but now it's ignored.
+			const iconClass = alt ? `noticon-${ alt }` : 'noticon-notification';
+			const el = document.createElement( 'span' );
+			el.classList.add( 'noticon' );
+			el.classList.add( iconClass );
+			return el;
+		}
+
+		togglePanel() {
+			if ( ! this.hasToggledPanel ) {
+				this.hasToggledPanel = true;
+			}
+			this.loadIframe();
+
+			this.el.classList.toggle( 'wpnt-stayopen' );
+			this.el.classList.toggle( 'wpnt-show' );
+			this.showingPanel = this.el.classList.contains( 'wpnt-show' );
+
+			document
+				.querySelectorAll( '.ab-active' )
+				.forEach( ( el ) => el.classList.remove( 'ab-active' ) );
+
+			if ( this.showingPanel ) {
+				this.el.querySelectorAll( '.wpn-unread' ).forEach( ( el ) => {
+					el.classList.remove( 'wpn-unread' );
+					el.classList.add( 'wpn-read' );
+				} );
+				this.reportIframeDelay();
+				if ( this.hasUnseen ) {
+					window.wpNotesCommon.bumpStat( 'notes-menu-clicks', 'non-zero' );
+				} else {
+					window.wpNotesCommon.bumpStat( 'notes-menu-clicks', 'zero' );
+				}
+
+				this.hasUnseen = false;
+			}
+
+			// tell the iframe we are opening it
+			this.postMessage( {
+				action: 'togglePanel',
+				showing: this.showingPanel,
+			} );
+
+			const focusNotesIframe = ( iframe ) => {
+				if ( iframe.contentWindow === null ) {
+					iframe.addEventListener( 'load', iframe.contentWindow.focus() );
+				} else {
+					iframe.contentWindow.focus();
+				}
+			};
+
+			if ( this.showingPanel ) {
+				focusNotesIframe( this.iframe );
+			} else {
+				window.focus();
+			}
+
+			this.setActive( this.showingPanel );
+		}
+
+		// Handle juggling the .active state of the masterbar
+		setActive( active ) {
+			if ( active ) {
+				this.currentMasterbarActive = document.querySelectorAll( '.masterbar li.active' );
+				this.currentMasterbarActive.forEach( ( el ) => el.classList.remove( 'active' ) );
+				this.el.classList.add( 'active' );
+			} else {
+				this.el.classList.remove( 'active' );
+				if ( this.currentMasterbarActive ) {
+					this.currentMasterbarActive.forEach( ( el ) => el.classList.add( 'active' ) );
+				}
+				this.currentMasterbarActive = undefined;
+			}
+			const a = this.el.querySelector( 'a' );
+			if ( a ) {
+				a.blur();
+			}
+		}
+
+		loadIframe() {
+			const args = [];
+
+			if ( this.iframe === null ) {
+				this.panel.classList.add( 'loadingIframe' );
+
+				if ( this.isJetpack ) {
+					args.push( 'jetpack=true' );
+					if ( this.linkAccountsURL ) {
+						args.push( 'link_accounts_url=' + escape( this.linkAccountsURL ) );
+					}
+				}
+
+				// Attempt to detect if browser is a touch device, similar code
+				// in Calypso. The class adds CSS needed for mobile Safari to allow
+				// scrolling of iframe.
+				if (
+					'ontouchstart' in window ||
+					( window.DocumentTouch && document instanceof window.DocumentTouch )
+				) {
+					this.panel.classList.add( 'touch' );
+				}
+
+				const panelRtl = this.panel.getAttribute( 'dir' ) === 'rtl';
+				const lang = this.panel.getAttribute( 'lang' ) || 'en';
+				args.push( 'v=' + cacheBuster );
+				args.push( 'locale=' + lang );
+				if ( wpNotesArgs.features ) {
+					args.push( 'features=' + encodeURIComponent( wpNotesArgs.features ) );
+				}
+				const queries = args.length ? '?' + args.join( '&' ) : '';
+				let src = iframeUrl;
+				if (
+					( iframeAppend === '2' || iframeAppend === '3' ) &&
+					( this.isRtl || panelRtl ) &&
+					! /rtl.html$/.test( iframeUrl )
+				) {
+					src = iframeUrl + 'rtl.html';
+				}
+				src = src + queries + '#' + document.location.toString();
+				if ( panelRtl ) {
+					src += '&rtl=1';
+				}
+				if ( ! lang.match( /^en/ ) ) {
+					src += '&lang=' + lang;
+				}
+
+				// Add the iframe (invisible until iFrameReady)
+				this.iframe = document.createElement( 'iframe' );
+				this.iframe.setAttribute( 'style', 'display:none' );
+				this.iframe.setAttribute( 'id', iframeFrameId );
+				this.iframe.setAttribute( 'frameborder', 0 );
+				this.iframe.setAttribute( 'allowtransparency', 'true' );
+				this.iframe.setAttribute( 'scrolling', iframeScroll );
+				this.iframe.setAttribute( 'src', src );
+
+				if ( wideScreen ) {
+					this.panel.classList.add( 'wide' );
+					this.iframe.classList.add( 'wide' );
+				}
+
+				// This stops twenty-twenty from wreaking its madness upon the iframe.
+				// @see https://opengrok.a8c.com/source/xref/pub/twentytwenty/assets/js/index.js?r=59938#314
+				this.iframe.classList.add( 'intrinsic-ignore' );
+				this.panel.appendChild( this.iframe );
+			}
+		}
+
+		reportIframeDelay() {
+			if ( ! this.iframeWindow ) {
+				if ( ! this.iframeSpinnerShown ) {
+					this.iframeSpinnerShown = new Date().getTime();
+				}
+				return;
+			}
+			if ( this.iframeSpinnerShown !== null ) {
+				let delay = 0;
+				if ( this.iframeSpinnerShown ) {
+					delay = new Date().getTime() - this.iframeSpinnerShown;
+				}
+				let bucket = '';
+				if ( delay === 0 ) {
+					bucket = '0';
+				} else if ( delay < 1000 ) {
+					bucket = '0-1';
+				} else if ( delay < 2000 ) {
+					bucket = '1-2';
+				} else if ( delay < 4000 ) {
+					bucket = '2-4';
+				} else if ( delay < 8000 ) {
+					bucket = '4-8';
+				} else {
+					bucket = '8-N';
+				}
+				window.wpNotesCommon.bumpStat( 'notes_iframe_perceived_delay', bucket );
+				this.iframeSpinnerShown = null;
+			}
+		}
+
+		iFrameReady( event ) {
+			const urlParser = new URL( this.iframe.src );
+			this.iframeOrigin = urlParser.protocol + '//' + urlParser.host;
+			this.iframeWindow = this.iframe.contentWindow;
+
+			if ( 'num_new' in event ) {
+				this.render( event.num_new, event.latest_type );
+			}
+
+			this.panel.classList.remove( 'loadingIframe' );
+			this.panel.querySelectorAll( '.wpnt-notes-panel-header' ).forEach( ( el ) => el.remove() );
+			this.iframe.style.removeProperty( 'display' );
+			if ( this.showingPanel ) {
+				this.reportIframeDelay();
+			}
+
+			const handleActivity = () => {
+				// Throttle postMessages since the overhead is pretty high & these events fire a lot
+				const now = new Date().getTime();
+				if ( ! this.lastActivityRefresh || this.lastActivityRefresh < now - 5000 ) {
+					this.lastActivityRefresh = now;
+					this.postMessage( { action: 'refreshNotes' } );
+				}
+			};
+
+			window.addEventListener( 'focus', handleActivity );
+			window.addEventListener( 'keydown', handleActivity );
+			window.addEventListener( 'mousemove', handleActivity );
+			window.addEventListener( 'scroll', handleActivity );
+
+			this.sendQueuedMessages();
+		}
+
+		hidePanel() {
+			if ( this.showingPanel ) {
+				this.togglePanel();
+			}
+		}
+
+		postMessage( message ) {
+			try {
+				let formattedMessage = typeof message === 'string' ? JSON.parse( message ) : message;
+
+				const isMessageValid =
+					typeof formattedMessage === 'function' ||
+					( typeof formattedMessage === 'object' && !! formattedMessage );
+
+				if ( ! isMessageValid ) {
+					return;
+				}
+
+				formattedMessage = {
+					type: 'notesIframeMessage',
+					...formattedMessage,
+				};
+
+				const targetOrigin = this.iframeOrigin;
+				if ( this.iframeWindow && this.iframeWindow.postMessage ) {
+					this.iframeWindow.postMessage( JSON.stringify( formattedMessage ), targetOrigin );
+				} else {
+					this.messageQ.push( formattedMessage );
+				}
+			} catch ( e ) {
+				// Do nothing.
+			}
+		}
+
+		sendQueuedMessages() {
+			this.messageQ.forEach( ( m ) => this.postMessage( m ) );
+			this.messageQ = [];
+		}
+	}
+
+	/**
+	 * Check if browser is Safari
+	 */
+	function isSafari() {
+		return /^((?!chrome|android).)*safari/i.test( navigator.userAgent );
+	}
+
+	/**
+	 * Require 3PC check not on safari and window location is not on wordpress.com or *.wordpress.com
+	 */
+	function requires3PC() {
+		return isSafari() ? window.location.hostname.match( /wordpress\.com$/ ) === null : true;
+	}
+
+	function loadCheck3PCIframe() {
+		var iframe = document.createElement( 'iframe' );
+		iframe.setAttribute( 'style', 'display:none' );
+		iframe.setAttribute( 'class', 'jetpack-notes-cookie-check' );
+		iframe.setAttribute( 'src', 'https://wordpress.com/widgets/3rd-party-cookie-check/' );
+		document.body.appendChild( iframe );
+	}
+
+	function initCheck3PC() {
+		loadCheck3PCIframe();
+		window.addEventListener('message', function (event) {
+			// Confirm that the message is from the right origin.
+			if ('https://wordpress.com' !== event.origin) {
+				return;
+			}
+
+			// Check whether 3rd Party Cookies are blocked
+			if ( 'WPCOM:3PC:allowed' === event.data && ! iframeLoaded ) {
+				console.debug( '3PC allowed' );
+				initIFrame();
+			} else if ( 'WPCOM:3PC:blocked' === event.data ) {
+				console.debug( '3PC blocked' );
+				initRedirect();
+			}
+		}, false);
+	}
+
+	function initIFrame() {
+		// The masterbar markup can lag this script, so when v3 is requested but only the v2
+		// panel was rendered, promote it to the v3 id.
+		if (
+			new URLSearchParams( document.location.search ).get( 'notifications' ) === 'v3' &&
+			! document.querySelector( '#wpnt-notes-panel3' )
+		) {
+			const v2Panel = document.querySelector( '#wpnt-notes-panel2' );
+			if ( v2Panel ) {
+				v2Panel.id = 'wpnt-notes-panel3';
+			}
+		}
+
+		if (
+			! document.querySelector( '#wpnt-notes-panel' ) &&
+			document.querySelector( '#wpnt-notes-panel3' ) &&
+			window.wpNotesIsJetpackClientV2
+		) {
+			iframeUrl = 'https://wordpress.com/widgets/notifications/app/';
+			iframeAppend = '3';
+			iframeScroll = 'yes';
+			wideScreen = true;
+		} else if (
+			! document.querySelector( '#wpnt-notes-panel' ) &&
+			document.querySelector( '#wpnt-notes-panel2' ) &&
+			window.wpNotesIsJetpackClientV2
+		) {
+			iframeUrl = 'https://wordpress.com/widgets/notifications/';
+			iframeAppend = '2';
+			iframeScroll = 'yes';
+			wideScreen = true;
+		}
+
+		iframePanelId = 'wpnt-notes-panel' + iframeAppend;
+		iframeFrameId = 'wpnt-notes-iframe' + iframeAppend;
+		iframeLoaded  = true;
+
+		new WPNTView();
+	}
+
+	function initRedirect() {
+		if ( iframeLoaded ) {
+			return;
+		}
+		const notificationsMenu = document.querySelector( '#wp-admin-bar-notes' );
+		if ( ! notificationsMenu ) {
+			return;
+		}
+
+		notificationsMenu.addEventListener( 'click', function( event ) {
+			event.stopPropagation();
+			event.preventDefault();
+			window.location = 'https://wordpress.com/reader/notifications';
+		} );
+
+		// If notes icon markup contains a span with the class "noticon-bell", add a class to the parent li
+		// This allows us to change the icon in the admin bar while maintaining backwards compatibility with older notification icon
+		if ( notificationsMenu.querySelector( '.noticon-bell' ) ) {
+			notificationsMenu.classList.add( 'bell' );
+		} else {
+			notificationsMenu.classList.add( 'notification' );
+		}
+	}
+
+	function init() {
+		requires3PC() ? initCheck3PC() : initIFrame();
+	}
+
+	if ( document.readyState !== 'loading' ) {
+		init();
+	} else {
+		document.addEventListener( 'DOMContentLoaded', init );
+	}
+} )();
+;
+!function(){function e(){const e=document.createElement("iframe");e.style.cssText="display:none",e.name="__tcfapiLocator",document.body.appendChild(e)}window.__tcfapi=function(){let e=[].slice.call(arguments),t=e[0],n=e[2];"ping"===t?"function"==typeof n&&n({gdprApplies:!1,cmpLoaded:!1,cmpStatus:"stub",displayStatus:"disabled",apiVersion:"2"}):"getTCData"!==t&&"addEventListener"!==t||"function"==typeof n&&n({gdprApplies:!1,tcfPolicyVersion:5,cmpId:258,cmpVersion:1},!0)},window.addEventListener("message",(function(e){let t="string"==typeof e.data,n={};try{n=t?JSON.parse(e.data):e.data}catch(e){}let a=n.__tcfapiCall;a&&window.__tcfapi(a.command,a.version,(function(n,c){let i={__tcfapiReturn:{returnValue:n,success:c,callId:a.callId}};t&&(i=JSON.stringify(i)),e&&e.source&&e.source.postMessage&&e.source.postMessage(i,"*")}),a.parameter)}),!1),"loading"!==document.readyState?e():document.addEventListener("DOMContentLoaded",e)}();;

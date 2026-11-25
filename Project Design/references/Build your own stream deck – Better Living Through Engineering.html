@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/ -->
+<html lang="en" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+		<link rel="pingback" href="https://thecuriousengineer756614207.wordpress.com/xmlrpc.php">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Build your own stream deck – Better Living Through Engineering</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://wordpress.com/">
+<link rel="dns-prefetch" href="https://af.pubmine.com/">
+<link rel="alternate" type="application/rss+xml" title="Better Living Through Engineering » Feed" href="https://thecuriousengineer756614207.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Better Living Through Engineering » Comments Feed" href="https://thecuriousengineer756614207.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Better Living Through Engineering » Build your own stream&nbsp;deck Comments Feed" href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/feed/">
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Person","@id":"https:\/\/thecuriousengineer756614207.wordpress.com\/author\/thecuriousengineer4120\/#person","name":"Angus Shaw","image":"https:\/\/secure.gravatar.com\/avatar\/9684db4b35f95b69234d21ef30f588d5739f7246483d6636a479567b8a4871cf?s=512&d=identicon&r=g","url":"http:\/\/thecuriousengineer756614207.wordpress.com","worksFor":{"@id":"https:\/\/thecuriousengineer756614207.wordpress.com\/#organization"}},{"@type":"Article","headline":"Build your own stream deck","datePublished":"2020-07-16T03:47:49+00:00","dateModified":"2020-10-21T14:57:13+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/thecuriousengineer756614207.wordpress.com\/2020\/07\/15\/build-your-own-stream-deck\/"},"image":"https:\/\/thecuriousengineer756614207.wordpress.com\/wp-content\/uploads\/2020\/07\/d85_4129_169.jpg","description":"A stream deck is like a miniature keyboard that can be used to control your computer through hotkey assignments. This is especially useful when combined with software like OBS (Open Broadcaster Software) which acts like a virtual broadcast production control room. In this guide we'll look at how you can build a stream deck yourself,","publisher":{"@id":"https:\/\/thecuriousengineer756614207.wordpress.com\/#organization"},"author":{"@id":"https:\/\/thecuriousengineer756614207.wordpress.com\/author\/thecuriousengineer4120\/#person"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/thecuriousengineer756614207.wordpress.com\/"},{"@type":"ListItem","position":2,"name":"Build your own stream deck"}]}]}</script><style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-2-1" href="./Build your own stream deck – Better Living Through Engineering_files/saved_resource(1)" type="text/css" media="all">
+<style id="admin-bar-inline-css">
+		#wpadminbar .quicklinks li img.blavatar {
+			border-radius: 2px;
+		}
+		#wpadminbar #wp-admin-bar-site-name.has-site-icon > .ab-item {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+		}
+		#wpadminbar #wp-admin-bar-site-name.has-site-icon > .ab-item:before {
+			content: none;
+		}
+		#wpadminbar #wp-admin-bar-site-name > .ab-item .site-icon {
+			width: 20px;
+			height: 20px;
+			border-radius: 2px;
+		}
+		@media screen and (max-width: 782px) {
+			#wpadminbar #wp-admin-bar-site-name > .ab-item .site-icon {
+				position: absolute;
+				top: 9px;
+				left: 12px;
+				width: 28px;
+				height: 28px;
+				margin: 0;
+				border-radius: 4px;
+			}
+		}
+
+		@media screen { html { margin-top: 32px !important; } }
+		@media screen and ( max-width: 782px ) { html { margin-top: 46px !important; } }
+	
+@media print { #wpadminbar { display:none; } }
+
+			.admin-bar {
+				position: inherit !important;
+				top: auto !important;
+			}
+			.admin-bar .goog-te-banner-frame {
+				top: 32px !important
+			}
+			@media screen and (max-width: 782px) {
+				.admin-bar .goog-te-banner-frame {
+					top: 46px !important;
+				}
+			}
+			@media screen and (max-width: 480px) {
+				.admin-bar .goog-te-banner-frame {
+					position: absolute;
+				}
+			}
+		
+/*# sourceURL=admin-bar-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#3858e9;--wp-admin-theme-color--rgb:56,88,233;--wp-admin-theme-color-darker-10:#2145e6;--wp-admin-theme-color-darker-10--rgb:33.0384615385,68.7307692308,230.4615384615;--wp-admin-theme-color-darker-20:#183ad6;--wp-admin-theme-color-darker-20--rgb:23.6923076923,58.1538461538,214.3076923077;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}body.admin-color-fresh{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){body.admin-color-fresh{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}:root .has-inline-color,:root .has-link-color a,:root .has-text-color{-webkit-text-fill-color:currentColor}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;overflow-wrap:normal!important;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}@supports (not (-webkit-backdrop-filter:blur(1px))) and (not (-moz-appearance:none)){mtd[columnalign=right]{text-align:-webkit-right}mtd[columnalign=left]{text-align:-webkit-left}menclose[notation~=top]{border-top:.065em solid;padding-top:.1em}menclose[notation~=bottom]{border-bottom:.065em solid;padding-bottom:.1em}}
+
+/*# sourceURL=/wp-content/plugins/gutenberg-core/v24.4.2/build/styles/block-library/common.min.css */
+</style>
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:var(--wp--style--block-background-padding,1.25em 2.375em)}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=/wp-content/plugins/gutenberg-core/v24.4.2/build/styles/block-library/heading/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:var(--wp--style--block-background-padding,1.25em 2.375em)}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=/wp-content/plugins/gutenberg-core/v24.4.2/build/styles/block-library/paragraph/style.min.css */
+</style>
+<style id="wp-block-library-inline-css-extra">
+.has-text-align-justify {
+	text-align:justify;
+}
+.has-text-align-justify{text-align:justify;}
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+.wp-block-button__link{background-color:#32373c;border-radius:9999px;box-shadow:none;color:#fff;font-size:1.125em;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-file__button{background:#32373c;color:#fff}.wp-block-accordion-heading{margin:0}.wp-block-accordion-heading__toggle{background-color:inherit!important;color:inherit!important}.wp-block-accordion-heading__toggle:not(:focus-visible){outline:none}.wp-block-accordion-heading__toggle:focus,.wp-block-accordion-heading__toggle:hover{background-color:inherit!important;border:none;box-shadow:none;color:inherit;padding:var(--wp--preset--spacing--20,1em) 0;text-decoration:none}.wp-block-accordion-heading__toggle:focus-visible{outline:auto;outline-offset:0}.wp-block-tab-list button:not(.has-text-color){color:inherit!important}.wp-block-tab-list button:not(.has-background){background-color:inherit!important}.wp-block-tab-list button:focus,.wp-block-tab-list button:hover{text-decoration:none}.wp-block-tab-list button:focus-visible{outline:auto;outline-offset:0}
+/*# sourceURL=/wp-content/plugins/gutenberg-core/v24.4.2/build/styles/block-library/classic.min.css */
+</style>
+
+<style id="coblocks-inline-format-inline-css">
+.uppercase{text-transform:uppercase}
+/*# sourceURL=coblocks-inline-format-inline-css */
+</style>
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-12-1" href="./Build your own stream deck – Better Living Through Engineering_files/saved_resource(2)" type="text/css" media="all">
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #fff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--dark-gray: #1a1a1a;--wp--preset--color--medium-gray: #686868;--wp--preset--color--light-gray: #e5e5e5;--wp--preset--color--blue-gray: #4d545c;--wp--preset--color--bright-blue: #007acc;--wp--preset--color--light-blue: #9adffd;--wp--preset--color--dark-brown: #402b30;--wp--preset--color--medium-brown: #774e24;--wp--preset--color--dark-red: #640c1f;--wp--preset--color--bright-red: #ff675f;--wp--preset--color--yellow: #ffef8e;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--albert-sans: 'Albert Sans', sans-serif;--wp--preset--font-family--alegreya: Alegreya, serif;--wp--preset--font-family--arvo: Arvo, serif;--wp--preset--font-family--bodoni-moda: 'Bodoni Moda', serif;--wp--preset--font-family--bricolage-grotesque: 'Bricolage Grotesque', sans-serif;--wp--preset--font-family--cabin: Cabin, sans-serif;--wp--preset--font-family--chivo: Chivo, sans-serif;--wp--preset--font-family--commissioner: Commissioner, sans-serif;--wp--preset--font-family--cormorant: Cormorant, serif;--wp--preset--font-family--courier-prime: 'Courier Prime', monospace;--wp--preset--font-family--crimson-pro: 'Crimson Pro', serif;--wp--preset--font-family--dm-mono: 'DM Mono', monospace;--wp--preset--font-family--dm-sans: 'DM Sans', sans-serif;--wp--preset--font-family--dm-serif-display: 'DM Serif Display', serif;--wp--preset--font-family--domine: Domine, serif;--wp--preset--font-family--eb-garamond: 'EB Garamond', serif;--wp--preset--font-family--epilogue: Epilogue, sans-serif;--wp--preset--font-family--fahkwang: Fahkwang, sans-serif;--wp--preset--font-family--figtree: Figtree, sans-serif;--wp--preset--font-family--fira-sans: 'Fira Sans', sans-serif;--wp--preset--font-family--fjalla-one: 'Fjalla One', sans-serif;--wp--preset--font-family--fraunces: Fraunces, serif;--wp--preset--font-family--gabarito: Gabarito, system-ui;--wp--preset--font-family--ibm-plex-mono: 'IBM Plex Mono', monospace;--wp--preset--font-family--ibm-plex-sans: 'IBM Plex Sans', sans-serif;--wp--preset--font-family--ibarra-real-nova: 'Ibarra Real Nova', serif;--wp--preset--font-family--instrument-serif: 'Instrument Serif', serif;--wp--preset--font-family--inter: Inter, sans-serif;--wp--preset--font-family--josefin-sans: 'Josefin Sans', sans-serif;--wp--preset--font-family--jost: Jost, sans-serif;--wp--preset--font-family--libre-baskerville: 'Libre Baskerville', serif;--wp--preset--font-family--libre-franklin: 'Libre Franklin', sans-serif;--wp--preset--font-family--literata: Literata, serif;--wp--preset--font-family--lora: Lora, serif;--wp--preset--font-family--merriweather: Merriweather, serif;--wp--preset--font-family--montserrat: Montserrat, sans-serif;--wp--preset--font-family--newsreader: Newsreader, serif;--wp--preset--font-family--noto-sans-mono: 'Noto Sans Mono', sans-serif;--wp--preset--font-family--nunito: Nunito, sans-serif;--wp--preset--font-family--open-sans: 'Open Sans', sans-serif;--wp--preset--font-family--overpass: Overpass, sans-serif;--wp--preset--font-family--pt-serif: 'PT Serif', serif;--wp--preset--font-family--petrona: Petrona, serif;--wp--preset--font-family--piazzolla: Piazzolla, serif;--wp--preset--font-family--playfair-display: 'Playfair Display', serif;--wp--preset--font-family--plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;--wp--preset--font-family--poppins: Poppins, sans-serif;--wp--preset--font-family--raleway: Raleway, sans-serif;--wp--preset--font-family--roboto: Roboto, sans-serif;--wp--preset--font-family--roboto-slab: 'Roboto Slab', serif;--wp--preset--font-family--rubik: Rubik, sans-serif;--wp--preset--font-family--rufina: Rufina, serif;--wp--preset--font-family--sora: Sora, sans-serif;--wp--preset--font-family--source-sans-3: 'Source Sans 3', sans-serif;--wp--preset--font-family--source-serif-4: 'Source Serif 4', serif;--wp--preset--font-family--space-mono: 'Space Mono', monospace;--wp--preset--font-family--syne: Syne, sans-serif;--wp--preset--font-family--texturina: Texturina, serif;--wp--preset--font-family--urbanist: Urbanist, sans-serif;--wp--preset--font-family--work-sans: 'Work Sans', sans-serif;--wp--preset--text-shadow--light: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.3);--wp--preset--text-shadow--strong: 0.1em 0.1em 0.25em rgba(0, 0, 0, 0.5);--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-dark-gray-color{color: var(--wp--preset--color--dark-gray) !important;}.has-medium-gray-color{color: var(--wp--preset--color--medium-gray) !important;}.has-light-gray-color{color: var(--wp--preset--color--light-gray) !important;}.has-blue-gray-color{color: var(--wp--preset--color--blue-gray) !important;}.has-bright-blue-color{color: var(--wp--preset--color--bright-blue) !important;}.has-light-blue-color{color: var(--wp--preset--color--light-blue) !important;}.has-dark-brown-color{color: var(--wp--preset--color--dark-brown) !important;}.has-medium-brown-color{color: var(--wp--preset--color--medium-brown) !important;}.has-dark-red-color{color: var(--wp--preset--color--dark-red) !important;}.has-bright-red-color{color: var(--wp--preset--color--bright-red) !important;}.has-yellow-color{color: var(--wp--preset--color--yellow) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-dark-gray-background-color{background-color: var(--wp--preset--color--dark-gray) !important;}.has-medium-gray-background-color{background-color: var(--wp--preset--color--medium-gray) !important;}.has-light-gray-background-color{background-color: var(--wp--preset--color--light-gray) !important;}.has-blue-gray-background-color{background-color: var(--wp--preset--color--blue-gray) !important;}.has-bright-blue-background-color{background-color: var(--wp--preset--color--bright-blue) !important;}.has-light-blue-background-color{background-color: var(--wp--preset--color--light-blue) !important;}.has-dark-brown-background-color{background-color: var(--wp--preset--color--dark-brown) !important;}.has-medium-brown-background-color{background-color: var(--wp--preset--color--medium-brown) !important;}.has-dark-red-background-color{background-color: var(--wp--preset--color--dark-red) !important;}.has-bright-red-background-color{background-color: var(--wp--preset--color--bright-red) !important;}.has-yellow-background-color{background-color: var(--wp--preset--color--yellow) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-dark-gray-border-color{border-color: var(--wp--preset--color--dark-gray) !important;}.has-medium-gray-border-color{border-color: var(--wp--preset--color--medium-gray) !important;}.has-light-gray-border-color{border-color: var(--wp--preset--color--light-gray) !important;}.has-blue-gray-border-color{border-color: var(--wp--preset--color--blue-gray) !important;}.has-bright-blue-border-color{border-color: var(--wp--preset--color--bright-blue) !important;}.has-light-blue-border-color{border-color: var(--wp--preset--color--light-blue) !important;}.has-dark-brown-border-color{border-color: var(--wp--preset--color--dark-brown) !important;}.has-medium-brown-border-color{border-color: var(--wp--preset--color--medium-brown) !important;}.has-dark-red-border-color{border-color: var(--wp--preset--color--dark-red) !important;}.has-bright-red-border-color{border-color: var(--wp--preset--color--bright-red) !important;}.has-yellow-border-color{border-color: var(--wp--preset--color--yellow) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-albert-sans-font-family{font-family: var(--wp--preset--font-family--albert-sans) !important;}.has-alegreya-font-family{font-family: var(--wp--preset--font-family--alegreya) !important;}.has-arvo-font-family{font-family: var(--wp--preset--font-family--arvo) !important;}.has-bodoni-moda-font-family{font-family: var(--wp--preset--font-family--bodoni-moda) !important;}.has-bricolage-grotesque-font-family{font-family: var(--wp--preset--font-family--bricolage-grotesque) !important;}.has-cabin-font-family{font-family: var(--wp--preset--font-family--cabin) !important;}.has-chivo-font-family{font-family: var(--wp--preset--font-family--chivo) !important;}.has-commissioner-font-family{font-family: var(--wp--preset--font-family--commissioner) !important;}.has-cormorant-font-family{font-family: var(--wp--preset--font-family--cormorant) !important;}.has-courier-prime-font-family{font-family: var(--wp--preset--font-family--courier-prime) !important;}.has-crimson-pro-font-family{font-family: var(--wp--preset--font-family--crimson-pro) !important;}.has-dm-mono-font-family{font-family: var(--wp--preset--font-family--dm-mono) !important;}.has-dm-sans-font-family{font-family: var(--wp--preset--font-family--dm-sans) !important;}.has-dm-serif-display-font-family{font-family: var(--wp--preset--font-family--dm-serif-display) !important;}.has-domine-font-family{font-family: var(--wp--preset--font-family--domine) !important;}.has-eb-garamond-font-family{font-family: var(--wp--preset--font-family--eb-garamond) !important;}.has-epilogue-font-family{font-family: var(--wp--preset--font-family--epilogue) !important;}.has-fahkwang-font-family{font-family: var(--wp--preset--font-family--fahkwang) !important;}.has-figtree-font-family{font-family: var(--wp--preset--font-family--figtree) !important;}.has-fira-sans-font-family{font-family: var(--wp--preset--font-family--fira-sans) !important;}.has-fjalla-one-font-family{font-family: var(--wp--preset--font-family--fjalla-one) !important;}.has-fraunces-font-family{font-family: var(--wp--preset--font-family--fraunces) !important;}.has-gabarito-font-family{font-family: var(--wp--preset--font-family--gabarito) !important;}.has-ibm-plex-mono-font-family{font-family: var(--wp--preset--font-family--ibm-plex-mono) !important;}.has-ibm-plex-sans-font-family{font-family: var(--wp--preset--font-family--ibm-plex-sans) !important;}.has-ibarra-real-nova-font-family{font-family: var(--wp--preset--font-family--ibarra-real-nova) !important;}.has-instrument-serif-font-family{font-family: var(--wp--preset--font-family--instrument-serif) !important;}.has-inter-font-family{font-family: var(--wp--preset--font-family--inter) !important;}.has-josefin-sans-font-family{font-family: var(--wp--preset--font-family--josefin-sans) !important;}.has-jost-font-family{font-family: var(--wp--preset--font-family--jost) !important;}.has-libre-baskerville-font-family{font-family: var(--wp--preset--font-family--libre-baskerville) !important;}.has-libre-franklin-font-family{font-family: var(--wp--preset--font-family--libre-franklin) !important;}.has-literata-font-family{font-family: var(--wp--preset--font-family--literata) !important;}.has-lora-font-family{font-family: var(--wp--preset--font-family--lora) !important;}.has-merriweather-font-family{font-family: var(--wp--preset--font-family--merriweather) !important;}.has-montserrat-font-family{font-family: var(--wp--preset--font-family--montserrat) !important;}.has-newsreader-font-family{font-family: var(--wp--preset--font-family--newsreader) !important;}.has-noto-sans-mono-font-family{font-family: var(--wp--preset--font-family--noto-sans-mono) !important;}.has-nunito-font-family{font-family: var(--wp--preset--font-family--nunito) !important;}.has-open-sans-font-family{font-family: var(--wp--preset--font-family--open-sans) !important;}.has-overpass-font-family{font-family: var(--wp--preset--font-family--overpass) !important;}.has-pt-serif-font-family{font-family: var(--wp--preset--font-family--pt-serif) !important;}.has-petrona-font-family{font-family: var(--wp--preset--font-family--petrona) !important;}.has-piazzolla-font-family{font-family: var(--wp--preset--font-family--piazzolla) !important;}.has-playfair-display-font-family{font-family: var(--wp--preset--font-family--playfair-display) !important;}.has-plus-jakarta-sans-font-family{font-family: var(--wp--preset--font-family--plus-jakarta-sans) !important;}.has-poppins-font-family{font-family: var(--wp--preset--font-family--poppins) !important;}.has-raleway-font-family{font-family: var(--wp--preset--font-family--raleway) !important;}.has-roboto-font-family{font-family: var(--wp--preset--font-family--roboto) !important;}.has-roboto-slab-font-family{font-family: var(--wp--preset--font-family--roboto-slab) !important;}.has-rubik-font-family{font-family: var(--wp--preset--font-family--rubik) !important;}.has-rufina-font-family{font-family: var(--wp--preset--font-family--rufina) !important;}.has-sora-font-family{font-family: var(--wp--preset--font-family--sora) !important;}.has-source-sans-3-font-family{font-family: var(--wp--preset--font-family--source-sans-3) !important;}.has-source-serif-4-font-family{font-family: var(--wp--preset--font-family--source-serif-4) !important;}.has-space-mono-font-family{font-family: var(--wp--preset--font-family--space-mono) !important;}.has-syne-font-family{font-family: var(--wp--preset--font-family--syne) !important;}.has-texturina-font-family{font-family: var(--wp--preset--font-family--texturina) !important;}.has-urbanist-font-family{font-family: var(--wp--preset--font-family--urbanist) !important;}.has-work-sans-font-family{font-family: var(--wp--preset--font-family--work-sans) !important;}.has-light-text-shadow{text-shadow: var(--wp--preset--text-shadow--light) !important;}.has-strong-text-shadow{text-shadow: var(--wp--preset--text-shadow--strong) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-14-1" href="./Build your own stream deck – Better Living Through Engineering_files/saved_resource(3)" type="text/css" media="all">
+<style id="wpcom-admin-bar-inline-css">
+
+			.admin-bar {
+				position: inherit !important;
+				top: auto !important;
+			}
+			.admin-bar .goog-te-banner-frame {
+				top: 32px !important
+			}
+			@media screen and (max-width: 782px) {
+				.admin-bar .goog-te-banner-frame {
+					top: 46px !important;
+				}
+			}
+			@media screen and (max-width: 480px) {
+				.admin-bar .goog-te-banner-frame {
+					position: absolute;
+				}
+			}
+		
+/*# sourceURL=wpcom-admin-bar-inline-css */
+</style>
+<style id="twentysixteen-style-inline-css">
+.cat-links, .byline { clip: rect(1px, 1px, 1px, 1px); height: 1px; position: absolute; overflow: hidden; width: 1px; }
+/*# sourceURL=twentysixteen-style-inline-css */
+</style>
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-20-1" href="./Build your own stream deck – Better Living Through Engineering_files/saved_resource(4)" type="text/css" media="all">
+<style id="jetpack-global-styles-frontend-style-inline-css">
+@import url('https://fonts-api.wp.com/css?family=Roboto:thin,extralight,light,regular,medium,semibold,bold,italic,bolditalic,extrabold,black|Space Mono:thin,extralight,light,regular,medium,semibold,bold,italic,bolditalic,extrabold,black|');:root { --font-headings: Space Mono; --font-base: Roboto; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+/*# sourceURL=jetpack-global-styles-frontend-style-inline-css */
+</style>
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-22-1" href="./Build your own stream deck – Better Living Through Engineering_files/saved_resource(5)" type="text/css" media="all">
+<script id="jetpack_related-posts-js-extra">
+var related_posts_js_options = {"post_heading":"h4"};
+//# sourceURL=jetpack_related-posts-js-extra
+</script>
+<script id="notes-common-lite-js-extra">
+var wpNotesArgs = {"cacheBuster":"b40da4fce94","wide":"1","iframeUrl":"https://wordpress.com/widgets/notifications/","iframeAppend":"2","iframeScroll":"no"};
+//# sourceURL=notes-common-lite-js-extra
+</script>
+<script id="wpcom-actionbar-placeholder-js-extra">
+var actionbardata = {"siteID":"180270366","postID":"28","siteURL":"https://thecuriousengineer756614207.wordpress.com","xhrURL":"https://thecuriousengineer756614207.wordpress.com/wp-admin/admin-ajax.php","nonce":"73b7db81c4","isLoggedIn":"1","statusMessage":"","statusSubscribed":"","subsEmailDefault":"instantly","proxyScriptUrl":"https://s0.wp.com/wp-content/js/wpcom-proxy-request.js?m=1513050504i&amp;ver=20211021","shortlink":"https://wp.me/pccoyy-s","i18n":{"followedText":"New posts from this site will now appear in your \u003Ca href=\"https://wordpress.com/reader\"\u003EReader\u003C/a\u003E","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","shortLinkCopied":"Copied to clipboard."}};
+//# sourceURL=wpcom-actionbar-placeholder-js-extra
+</script>
+<script id="jetpack-mu-wpcom-settings-js-before">
+var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https://s0.wp.com/wp-content/mu-plugins/jetpack-mu-wpcom-plugin/sun/jetpack_vendor/automattic/jetpack-mu-wpcom/src/build/"};
+//# sourceURL=jetpack-mu-wpcom-settings-js-before
+</script>
+<script crossorigin="anonymous" type="text/javascript" src="./Build your own stream deck – Better Living Through Engineering_files/saved_resource(6)"></script>
+<script id="rlt-proxy-js-after">
+	rltInitialize( {"token":"rlt-MnxYbkNqbmZmaEZ6dkk2blAwNExPOFZPNjdmeVdybmpOcWRxeWk5K3ZWK0FPMmE2VEFjRUxBMGNBNW5wb0ZiaiszSVhlbW44SkZnVm9pQ1BHMlNRbW80WXdDdk0xTlptM2RYYzlkM3lPWXdCa2E2OWFtcUl4Vys0aGN5NVZ4akhyVVMzQUFmVVlseTlXY21xTHA4bUhMcm5PNVphcUN5MkVtZ0J5QmtQajZzOUVJd2xPMnYvcnZDSE5GZkgyWWJpSDZub1hLbkZTMWVlZ3VOWVQzb3ZGdWxEWnh6OXdmQmF4SjBZeXdvN3VhN1dua3J2d21DT0RWRTJhdjA3bHorZnU0VjY3MG9CWkFTelJhRUJkUS9wVVAweGN1VWM2YUJpMGVaL1YwRzFBWG41RT18ZmE5M2Y1YzVhYTRlMGQ4ZWMxZDQ5MGY5MmM5ZmZiM2JlMGI1ZGYwYjA1ZjMxM2FkfDI4NmVjMjA0ODU1NGM5NzQ4OWVlZjA4MzhhYzkzMDBjYzA5ZGQ5MzczMTBiZjU4MzgzOWIzZGY0YWRmZmVjMjNlYzM0NWIyNjYxMGYwODQxNTVmOTM1Y2FiOWM4ODZlYWMzODE2MWFlZmYyZWU4NWQxNWJkNGZkZDllYjI5YWE3","iframeOrigins":["https:\/\/widgets.wp.com"]} );
+//# sourceURL=rlt-proxy-js-after
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://thecuriousengineer756614207.wordpress.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/">
+<link rel="shortlink" href="https://wp.me/pccoyy-s">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fthecuriousengineer756614207.wordpress.com%2F2020%2F07%2F15%2Fbuild-your-own-stream-deck%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fthecuriousengineer756614207.wordpress.com%2F2020%2F07%2F15%2Fbuild-your-own-stream-deck%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Build your own stream deck">
+<meta property="og:url" content="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/">
+<meta property="og:description" content="A stream deck is like a miniature keyboard that can be used to control your computer through hotkey assignments. This is especially useful when combined with software like OBS (Open Broadcaster Sof…">
+<meta property="article:published_time" content="2020-07-16T03:47:49+00:00">
+<meta property="article:modified_time" content="2020-10-21T14:57:13+00:00">
+<meta property="og:site_name" content="Better Living Through Engineering">
+<meta property="og:image" content="https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?fit=1200%2C675&amp;ssl=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta property="og:image:alt" content="">
+<meta property="og:locale" content="en_US">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<meta name="twitter:text:title" content="Build your own stream&nbsp;deck">
+<meta name="twitter:image" content="https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?fit=1200%2C675&amp;ssl=1&amp;w=640">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico?m=1713425267i" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="https://s0.wp.com/i/favicon.ico?m=1713425267i" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon" href="https://s0.wp.com/i/webclip.png?m=1713868326i">
+<link rel="search" type="application/opensearchdescription+xml" href="https://thecuriousengineer756614207.wordpress.com/osd.xml" title="Better Living Through Engineering">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+<meta name="description" content="A stream deck is like a miniature keyboard that can be used to control your computer through hotkey assignments. This is especially useful when combined with software like OBS (Open Broadcaster Software) which acts like a virtual broadcast production control room. In this guide we'll look at how you can build a stream deck yourself,…">
+<script>
+var wa_client = {}; wa_client.cmd = []; wa_client.config = { 'blog_id': 180270366, 'blog_language': 'en', 'is_wordads': false, 'hosting_type': 0, 'afp_account_id': null, 'afp_host_id': 5038568878849053, 'theme': 'pub/twentysixteen', '_': { 'title': 'Advertisement', 'privacy_settings': 'Privacy Settings' }, 'formats': [ 'inline', 'belowpost', 'bottom_sticky', 'sidebar_sticky_right', 'sidebar', 'gutenberg_rectangle', 'gutenberg_leaderboard', 'gutenberg_mobile_leaderboard', 'gutenberg_skyscraper' ] };
+</script>
+		<script type="text/javascript">
+
+			window.doNotSellCallback = function() {
+
+				var linkElements = [
+					'a[href="https://wordpress.com/?ref=footer_blog"]',
+					'a[href="https://wordpress.com/?ref=footer_website"]',
+					'a[href="https://wordpress.com/?ref=vertical_footer"]',
+					'a[href^="https://wordpress.com/?ref=footer_segment_"]',
+				].join(',');
+
+				var dnsLink = document.createElement( 'a' );
+				dnsLink.href = 'https://wordpress.com/advertising-program-optout/';
+				dnsLink.classList.add( 'do-not-sell-link' );
+				dnsLink.rel = 'nofollow';
+				dnsLink.style.marginLeft = '0.5em';
+				dnsLink.textContent = 'Do Not Sell or Share My Personal Information';
+
+				var creditLinks = document.querySelectorAll( linkElements );
+
+				if ( 0 === creditLinks.length ) {
+					return false;
+				}
+
+				Array.prototype.forEach.call( creditLinks, function( el ) {
+					el.insertAdjacentElement( 'afterend', dnsLink );
+				});
+
+				return true;
+			};
+
+		</script>
+		<noscript><style>.jetpack-comments{visibility:visible!important}</style></noscript><script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_gat._anonymizeIp']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="./Build your own stream deck – Better Living Through Engineering_files/ga.js.download"></script>
+<link crossorigin="anonymous" rel="stylesheet" id="all-css-6-5" href="./Build your own stream deck – Better Living Through Engineering_files/style(1).css" type="text/css" media="all">
+
+<style>.wordads-ad-wrapper {
+    position: static;
+    font: 11px Arial, sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+    max-width: 100%;
+    margin: 25px auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.wordads-ad-wrapper--sidebar,
+.wordads-ad-wrapper--gutenberg_skyscraper,
+.wordads-ad-wrapper--gutenberg_mobile_leaderboard {
+    font-size: 8px;
+}
+
+.wordads-ad-title {
+    margin: 0 auto 5px
+}
+
+.wordads-ad-controls {
+    margin: 5px auto 0;
+    text-align: right
+}
+
+/* Hide title and controls initially */
+.wordads-ad-title,
+.wordads-ad-controls {
+    visibility: hidden;
+}
+
+.wordads-ad-controls span {
+    cursor: pointer
+}
+
+.wordads-ad {
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.wordads-ad iframe {
+    margin: 0;
+    padding: 0
+}
+
+.wordads-ad.wordads-ad-responsive {
+    width: 100%;
+    max-width: unset
+}
+
+.wordads-ad-sticky-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: fixed;
+    transition: transform .2s ease-in-out;
+    user-select: none;
+    padding: 5px 0;
+    z-index: 49999
+}
+.wordads-ad-wrapper--bottom_sticky.wordads-ad-sticky-wrapper {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: transparent;
+    transform: translate(0, 0);
+}
+
+.wordads-ad-wrapper--bottom_sticky.wordads-ad-sticky-wrapper.ad-slot-filled {
+    background: #f1f1f1;
+}
+
+.wordads-ad-wrapper--sidebar_sticky_right.wordads-ad-sticky-wrapper {
+    width: fit-content;
+    min-width: 120px;
+    top: max(calc(var(--wp-admin--admin-bar--height, 0px) + 24px), 10%);
+    right: 20px;
+}
+
+.wordads-ad-wrapper--sidebar_sticky_right .wordads-ad-content {
+    border: 1px solid #f1f1f1;
+    margin-left: -1px;
+}
+
+.wordads-ad-sticky-close-btn {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    box-sizing: content-box;
+    cursor: pointer;
+    overflow: hidden;
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg width=%2730%27 height=%2730%27 viewBox=%270 0 30 30%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Crect x=%270.5%27 y=%270.5%27 width=%2729%27 height=%2729%27 rx=%2714.5%27 fill=%27white%27/%3E%3Crect x=%270.5%27 y=%270.5%27 width=%2729%27 height=%2729%27 rx=%2714.5%27 stroke=%27%23DDDDDF%27/%3E%3Cpath d=%27M19 11L15 15L19 19%27 stroke=%27%237C7F83%27 stroke-width=%271.5%27/%3E%3Cpath d=%27M11 19L15 15L11 11%27 stroke=%27%237C7F83%27 stroke-width=%271.5%27/%3E%3C/svg%3E")
+}
+
+.wordads-ad-wrapper--bottom_sticky .wordads-ad-sticky-close-btn {
+    top: -14px;
+    left: .75rem;
+}
+
+.wordads-ad-wrapper--sidebar_sticky_right .wordads-ad-sticky-close-btn {
+    top: -14px;
+    right: 0;
+}
+
+.wordads-ad-sticky {
+    width: auto;
+    max-width: initial;
+    max-height: inherit;
+}
+
+.wordads-ad-sticky .wordads-ad-title,
+.wordads-ad-sticky .wordads-ad-controls {
+    color: #333
+}
+
+.wordads-ad-hidden {
+	visibility: hidden !important;
+	position: absolute !important;
+	pointer-events: none !important;
+	width: 0 !important;
+	height: 0 !important;
+	overflow: hidden !important;
+	clip: rect(0 0 0 0) !important;
+}
+
+.wordads-ad-wrapper--bottom_sticky.wordads-ad-hidden {
+    transform: translate(0, 1000px);
+}
+
+.google-auto-placed {
+    height: 0px !important;
+}
+
+ins.adsbygoogle::before,
+ins.adsbygoogle::after {
+    visibility: hidden !important;
+}
+
+ins.adsbygoogle {
+    background: transparent;
+    padding: 0 !important;
+}</style><script src="./Build your own stream deck – Better Living Through Engineering_files/prebid-load.js.download" async=""></script><script src="./Build your own stream deck – Better Living Through Engineering_files/wp-emoji-release.min.js.download" defer=""></script><link rel="stylesheet" id="gravatar-card-css" href="./Build your own stream deck – Better Living Through Engineering_files/hovercards.min.css"><link href="./Build your own stream deck – Better Living Through Engineering_files/action-bar.css" rel="stylesheet"></head>
+
+<body class="wp-singular post-template-default single single-post postid-28 single-format-standard logged-in admin-bar no-customize-support wp-embed-responsive wp-theme-pubtwentysixteen customizer-styles-applied jetpack-reblog-enabled categories-hidden author-hidden has-marketing-bar has-marketing-bar-theme-twenty-sixteen">
+		<div id="wpadminbar" class="nojq">
+							<a class="screen-reader-shortcut" href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/#wp-toolbar-skip-target">Skip toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul role="menu" id="wp-admin-bar-root-default" class="ab-top-menu"><li role="group" id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" role="menuitem" aria-expanded="false" href="https://my.wordpress.com/sites"><span class="ab-icon svg-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+	<path d="M 22 12 C 22 6.49 17.51 2 12 2 C 6.48 2 2 6.49 2 12 C 2 17.52 6.48 22 12 22 C 17.51 22 22 17.52 22 12 M 9.78 17.37 L 6.37 8.22 C 6.92 8.2 7.54 8.14 7.54 8.14 C 8.04 8.08 7.98 7.01 7.48 7.03 C 7.48 7.03 6.03 7.14 5.11 7.14 C 4.93 7.14 4.74 7.14 4.53 7.13 C 6.12 4.69 8.87 3.11 12 3.11 C 14.33 3.11 16.45 3.98 18.05 5.45 C 17.37 5.34 16.4 5.84 16.4 7.03 C 16.4 7.77 16.85 8.39 17.3 9.13 C 17.65 9.74 17.85 10.49 17.85 11.59 C 17.85 13.08 16.45 16.59 16.45 16.59 L 13.42 8.22 C 13.96 8.2 14.24 8.05 14.24 8.05 C 14.74 8 14.68 6.8 14.18 6.83 C 14.18 6.83 12.74 6.95 11.8 6.95 C 10.93 6.95 9.47 6.83 9.47 6.83 C 8.97 6.8 8.91 8.03 9.41 8.05 L 10.33 8.13 L 11.59 11.54 L 9.78 17.37 M 19.41 12 C 19.65 11.36 20.15 10.13 19.84 7.75 C 20.54 9.04 20.89 10.46 20.89 12 C 20.89 15.29 19.16 18.24 16.49 19.78 C 17.46 17.19 18.43 14.58 19.41 12 M 8.1 20.09 C 5.12 18.65 3.11 15.53 3.11 12 C 3.11 10.7 3.34 9.52 3.83 8.41 C 5.25 12.3 6.67 16.2 8.1 20.09 M 12.13 13.46 L 14.71 20.44 C 13.85 20.73 12.95 20.89 12 20.89 C 11.21 20.89 10.43 20.78 9.71 20.56 C 10.52 18.18 11.33 15.82 12.13 13.46 L 12.13 13.46"></path>
+</svg>
+</span><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">WordPress.com</span></a><div class="ab-sub-wrapper"><ul role="menu" aria-label="WordPress.com" id="wp-admin-bar-wp-logo-default" class="ab-submenu"><li role="group" id="wp-admin-bar-wpcom-sites"><a class="ab-item" role="menuitem" href="https://my.wordpress.com/sites">Sites</a></li><li role="group" id="wp-admin-bar-wpcom-domains"><a class="ab-item" role="menuitem" href="https://my.wordpress.com/domains">Domains</a></li><li role="group" id="wp-admin-bar-wpcom-emails"><a class="ab-item" role="menuitem" href="https://my.wordpress.com/emails">Emails</a></li><li role="group" id="wp-admin-bar-wpcom-plugins"><a class="ab-item" role="menuitem" href="https://my.wordpress.com/plugins">Plugins</a></li></ul></div></li></ul><ul role="menu" id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu"><li role="group" id="wp-admin-bar-reader" class="wp-admin-bar-reader"><a class="ab-item" role="menuitem" href="https://wordpress.com/reader"><span class="ab-icon" title="Read the blogs and topics you follow" aria-hidden="true"></span><span class="ab-label">Reader</span></a></li><li role="group" id="wp-admin-bar-notes" class="menupop bell"><a class="ab-item" role="menuitem" href="https://wordpress.com/reader/notifications"><span title="Manage your notifications"><span id="wpnt-notes-unread-count" class="wpnt-loading wpn-unread"></span><span class="noticon noticon-bell ab-icon"></span></span></a><div id="wpnt-notes-panel2" style="display:none" lang="en" dir="ltr" class="wide"><iframe style="" id="wpnt-notes-iframe2" frameborder="0" allowtransparency="true" scrolling="no" src="./Build your own stream deck – Better Living Through Engineering_files/saved_resource(10).html" class="wide intrinsic-ignore"></iframe></div></li><li role="group" id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item" role="menuitem" aria-expanded="false" href="https://my.wordpress.com/me/account"><span class="display-name user-display-name">aymanalizahira</span><img referrerpolicy="no-referrer" alt="aymanalizahira's avatar" src="./Build your own stream deck – Better Living Through Engineering_files/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62" srcset="https://1.gravatar.com/avatar/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62?s=28&amp;d=identicon&amp;r=G 1x, https://1.gravatar.com/avatar/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62?s=42&amp;d=identicon&amp;r=G 1.5x, https://1.gravatar.com/avatar/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62?s=56&amp;d=identicon&amp;r=G 2x, https://1.gravatar.com/avatar/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62?s=84&amp;d=identicon&amp;r=G 3x, https://1.gravatar.com/avatar/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62?s=112&amp;d=identicon&amp;r=G 4x" class="avatar avatar-28" height="28" width="28" decoding="async"></a><div class="ab-sub-wrapper"><ul role="menu" aria-label="aymanalizahira" id="wp-admin-bar-user-actions" class="ab-submenu"><li role="group" id="wp-admin-bar-user-info"><a class="ab-item" role="menuitem" href="https://my.wordpress.com/me/account"><img referrerpolicy="no-referrer" alt="aymanalizahira's avatar" src="./Build your own stream deck – Better Living Through Engineering_files/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62(1)" srcset="https://1.gravatar.com/avatar/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62?s=64&amp;d=identicon&amp;r=G 1x, https://1.gravatar.com/avatar/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62?s=96&amp;d=identicon&amp;r=G 1.5x, https://1.gravatar.com/avatar/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62?s=128&amp;d=identicon&amp;r=G 2x, https://1.gravatar.com/avatar/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62?s=192&amp;d=identicon&amp;r=G 3x, https://1.gravatar.com/avatar/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62?s=256&amp;d=identicon&amp;r=G 4x" class="avatar avatar-64" height="64" width="64" decoding="async"><span class="display-name howdy">Howdy, <span class="user-display-name">aymanalizahira</span></span><span class="username" hidden="">aymanalizahira</span><span class="display-name edit-profile">Edit Profile</span></a></li><li role="group" id="wp-admin-bar-logout"><a class="ab-item" role="menuitem" href="https://thecuriousengineer756614207.wordpress.com/wp-login.php?action=logout&amp;_wpnonce=19988e8729">Log Out</a></li></ul><ul role="menu" aria-label="aymanalizahira" id="wp-admin-bar-wpcom-account" class="ab-sub-secondary ab-submenu"><li role="group" id="wp-admin-bar-my-wpcom-account"><a class="ab-item" role="menuitem" href="https://my.wordpress.com/me/account"><span class="button wpcom-button">My <span class="wpcom-logo"></span> WordPress.com Account</span></a></li></ul></div></li><li role="group" id="wp-admin-bar-search" class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1" role="menuitem"><form action="https://thecuriousengineer756614207.wordpress.com/" method="get" id="adminbarsearch"><span class="ab-icon svg-icon" aria-hidden="true"><svg aria-hidden="true" focusable="false" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill: none" stroke="currentColor" stroke-width="1.5">
+	<path d="M5 19L9.28769 14.7123M18.25 11C18.25 13.8995 15.8995 16.25 13 16.25C10.1005 16.25 7.75 13.8995 7.75 11C7.75 8.10051 10.1005 5.75 13 5.75C15.8995 5.75 18.25 8.10051 18.25 11Z"></path>
+</svg>
+</span><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150"><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"></form></div></li></ul>			</div>
+							<div id="wp-toolbar-skip-target"></div>
+					</div>
+
+		
+<script type="text/javascript">
+/* <![CDATA[ */
+( function() {
+	function init() {
+		// debug bar extra
+		window.clickDebugLink = function( parentId, obj ) {
+			if ( ! window.jQuery ) {
+				return;
+			}
+			var $ = window.jQuery;
+
+			$( '#' + parentId ).children( 'div' ).hide();
+
+			document.getElementById( obj.href.substr( obj.href.indexOf( '#' ) + 1 ) ).style.display = 'block';
+			$( obj.href.substr( obj.href.indexOf( '#' ) ) ).show()
+
+			$( obj ).parent().addClass( 'current' ).siblings( 'li' ).removeClass( 'current' );
+
+			return false;
+		};
+	}
+
+	if ( document.readyState !== 'loading' ) {
+		init();
+	} else {
+		document.addEventListener( 'DOMContentLoaded', init );
+	}
+} )();
+/* ]]> */
+</script>
+<div id="page" class="site">
+	<div class="site-inner">
+		<a class="skip-link screen-reader-text" href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/#content">
+			Skip to content		</a>
+
+		<header id="masthead" class="site-header">
+			<div class="site-header-main">
+				<div class="site-branding">
+					<a href="https://thecuriousengineer756614207.wordpress.com/" class="site-logo-link" rel="home" itemprop="url"></a>
+											<p class="site-title"><a href="https://thecuriousengineer756614207.wordpress.com/" rel="home">Better Living Through Engineering</a></p>
+										</div><!-- .site-branding -->
+
+									<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+					<div id="site-header-menu" class="site-header-menu">
+													<nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+								<div class="menu-primary-container"><ul id="menu-primary" class="primary-menu"><li id="menu-item-69" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-69"><a href="https://thecuriousengineer756614207.wordpress.com/">Home</a></li>
+<li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-13"><a href="https://thecuriousengineer756614207.wordpress.com/blog/">Blog</a></li>
+<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="https://thecuriousengineer756614207.wordpress.com/guides/">Guides</a></li>
+<li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="https://thecuriousengineer756614207.wordpress.com/about/">About</a></li>
+</ul></div>							</nav><!-- .main-navigation -->
+						
+													<nav id="social-navigation" class="social-navigation" aria-label="Social Links Menu">
+								<div class="menu-social-links-container"><ul id="menu-social-links" class="social-links-menu"><li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a href="https://facebook.com/"><span class="screen-reader-text">Facebook</span></a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="http://twitter.com/"><span class="screen-reader-text">Twitter</span></a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="http://instagram.com/"><span class="screen-reader-text">Instagram</span></a></li>
+</ul></div>							</nav><!-- .social-navigation -->
+											</div><!-- .site-header-menu -->
+							</div><!-- .site-header-main -->
+
+					</header><!-- .site-header -->
+
+		<div id="content" class="site-content">
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
+		
+<article id="post-28" class="post-28 post type-post status-publish format-standard has-post-thumbnail hentry category-electronics-projects category-guides category-projects tag-3d-printing tag-arduino tag-engineering tag-guides tag-programming tag-summer-projects">
+	<header class="entry-header">
+		<h1 class="entry-title">Build your own stream&nbsp;deck</h1>	</header><!-- .entry-header -->
+
+	
+	
+		<div class="post-thumbnail">
+			<img width="1200" height="675" src="./Build your own stream deck – Better Living Through Engineering_files/d85_4129_169.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?w=1200 1200w, https://thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?w=2400 2400w, https://thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?w=150 150w, https://thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?w=300 300w, https://thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?w=768 768w, https://thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?w=1024 1024w, https://thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?w=1440 1440w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 60vw, (max-width: 1362px) 62vw, 840px" data-attachment-id="271" data-permalink="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/d85_4129_169/" data-orig-file="https://thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg" data-orig-size="6802,3826" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;4&quot;,&quot;camera&quot;:&quot;NIKON D850&quot;,&quot;created_timestamp&quot;:&quot;1596723199&quot;,&quot;focal_length&quot;:&quot;50&quot;,&quot;iso&quot;:&quot;2000&quot;,&quot;shutter_speed&quot;:&quot;0.016666666666667&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="D85_4129_169" data-image-description="" data-image-caption="" data-large-file="https://thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?w=840">	</div><!-- .post-thumbnail -->
+
+	
+	<div class="entry-content">
+		
+<p class="has-text-align-justify wp-block-paragraph"><em>A stream deck is like a miniature keyboard that can be used to control your computer through hotkey assignments. This is especially useful when combined with software like OBS (Open Broadcaster Software) which acts like a virtual broadcast production control room. In this guide we’ll look at how you can build a stream deck yourself, so let’s get started!</em></p>
+
+
+
+<span id="more-28"></span>
+
+
+
+<h3 class="wp-block-heading">OBS</h3>
+
+
+
+<p class="has-text-align-justify wp-block-paragraph"><a rel="noreferrer noopener" href="https://obsproject.com/" target="_blank">Open Broadcaster Software</a> is a common virtual broadcast application that manages everything (Camera, mics, scenes etc) before broadcasting your content live, recording your content, or passing it off to a video conferencing client like Zoom. The easier it is to control OBS, the less obvious it is that there is even an extra system there, this is where a stream assistant or deck comes in. There are stream decks commercially available, one of the most popular and well known is the Elgato <a rel="noreferrer noopener" href="https://www.elgato.com/en/gaming/stream-deck" target="_blank">StreamDeck</a>. But this blog isn’t called BetterLivingThroughBuyingStuff, so lets look at what we need to do to make one ourself.</p>
+
+
+
+<h3 class="wp-block-heading">The Outline</h3>
+
+
+
+<p class="has-text-align-justify wp-block-paragraph">Lets brainstorm. We need;<br>1. A controller to communicate with the PC.<br>2. Switches to act as my input devices.<br>3. A box to house all the component.<br>4. Some code to translate the physical keypresses into keystrokes<br><br>I’ll also add a port at the pack to attach a foot pedal which will give me the ability to have a hands free way to trigger push-to-talk or PTT.<br><br>1. For the controller we can use an <a rel="noreferrer noopener" href="https://www.amazon.com/gp/product/B012FOV17O/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&amp;psc=1" target="_blank">Arduino Pro Micro ATmega32U4</a> which we’ll program to act like a USB keyboard. This will essentially send keystrokes to the computer when the switches are pressed, which we will map to any command we want. One interesting thing to note is that your keyboard actually has some hidden keys, keys F13-F24 to be exact. Because of this, we don’t have to worry about accidentally having two keys perform the same function confusing our computer.<br><br>2. For the switches I decided to get some <a rel="noreferrer noopener" href="https://www.cherrymx.de/en/mx-original/mx-black.html" target="_blank">Cherry MX Black</a> keyboard switches. Cherry MX switches are arguably the best keyboard switches you can get, found in many gaming keyboards. They come in a variety of configurations, with varying activation modes, required activation forces, and RGB housings. The Black model has a linear activation and requiring a nice force to activate, and while there are holes to pass through 3mm LED, the housing is not opaque so you don’t tend to get the same RGB performance you would with an opaque switch housing. Mouser is a good electronics wholesaler to get components like this in the US, you can check out the Cherry MX Black at Mouser <a rel="noreferrer noopener" href="https://www.mouser.com/ProductDetail/cherry/mx1a-11nn/?qs=5iusCjFLgR6EHFBhPS8DXg%3D%3D&amp;countrycode=US&amp;currencycode=USD" target="_blank">here</a>. To go along with the switches I also needed some keycaps. These interestingly were the most difficult item to find, but I did find some <a rel="noreferrer noopener" href="https://www.mouser.com/ProductDetail/sparkfun-electronics/prt-15305/?qs=EBDBlbfErPzfsnccoEI2Mg%3D%3D&amp;countrycode=US&amp;currencycode=USD" target="_blank">plain black keycaps</a> from SparkFun electronics, another great electronics resource.<br><br>3. For the box to house the components, I designed a two piece box in AutoDesk Fusion360, and then 3D printed it on my Creality Ender 3 Pro printer. I wanted to match the geometry of my existing keyboard, this is total overkill, but wasn’t really that much <em>more </em>work than designing a standard box.<br><br>4. Finally, the system was controlled by programming the arduino to read the switch values, and if a certain switch was pushed, it would communicate with the computer using a ‘Keyboard’ library and send the corresponding ‘F-key’ stroke, but more on the specifics on that later.<br><br>So with that, let’s get started!</p>
+
+
+<div id="atatags-370373-6b06e037a9545">
+		<script type="text/javascript">
+			__ATA = window.__ATA || {};
+			__ATA.cmd = window.__ATA.cmd || [];
+			__ATA.cmd.push(function() {
+				__ATA.initVideoSlot('atatags-370373-6b06e037a9545', {
+					sectionId: '370373',
+					format: 'inread'
+				});
+			});
+		</script>
+	</div><span id="wordads-inline-marker" style="display: none;"></span><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul data-sharing-events-added="true"><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-28" class="share-twitter sd-button share-icon" href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/?share=twitter&amp;nb=1" target="_blank" aria-labelledby="sharing-twitter-28">
+				<span id="sharing-twitter-28" hidden="">Share on X (Opens in new window)</span>
+				<span>X</span>
+			</a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-28" class="share-facebook sd-button share-icon" href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/?share=facebook&amp;nb=1" target="_blank" aria-labelledby="sharing-facebook-28">
+				<span id="sharing-facebook-28" hidden="">Share on Facebook (Opens in new window)</span>
+				<span>Facebook</span>
+			</a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-180270366-28-6b06e037a9add" data-src="//widgets.wp.com/likes/index.html?ver=20261125#blog_id=180270366&amp;post_id=28&amp;origin=thecuriousengineer756614207.wordpress.com&amp;obj_id=180270366-28-6b06e037a9add" data-name="like-post-frame-180270366-28-6b06e037a9add" data-title="Like or Reblog"><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-180270366-28-6b06e037a9add" src="./Build your own stream deck – Better Living Through Engineering_files/index.html" height="55px" width="100%" frameborder="0" scrolling="no" title="Like or Reblog"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div id="jp-relatedposts" class="jp-relatedposts">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div></div><div class="page-links"><span class="page-links-title">Pages:</span> <span class="post-page-numbers current" aria-current="page"><span><span class="screen-reader-text">Page </span>1</span></span><span class="screen-reader-text">, </span><a href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/2/" class="post-page-numbers"><span><span class="screen-reader-text">Page </span>2</span></a><span class="screen-reader-text">, </span><a href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/3/" class="post-page-numbers"><span><span class="screen-reader-text">Page </span>3</span></a><span class="screen-reader-text">, </span><a href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/4/" class="post-page-numbers"><span><span class="screen-reader-text">Page </span>4</span></a><span class="screen-reader-text">, </span><a href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/5/" class="post-page-numbers"><span><span class="screen-reader-text">Page </span>5</span></a><span class="screen-reader-text">, </span><a href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/6/" class="post-page-numbers"><span><span class="screen-reader-text">Page </span>6</span></a></div>	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="byline"><span class="author vcard"><img referrerpolicy="no-referrer" alt="Unknown's avatar" src="./Build your own stream deck – Better Living Through Engineering_files/9684db4b35f95b69234d21ef30f588d5739f7246483d6636a479567b8a4871cf.png" srcset="https://0.gravatar.com/avatar/9684db4b35f95b69234d21ef30f588d5739f7246483d6636a479567b8a4871cf?s=49&amp;d=identicon&amp;r=G 1x, https://0.gravatar.com/avatar/9684db4b35f95b69234d21ef30f588d5739f7246483d6636a479567b8a4871cf?s=74&amp;d=identicon&amp;r=G 1.5x, https://0.gravatar.com/avatar/9684db4b35f95b69234d21ef30f588d5739f7246483d6636a479567b8a4871cf?s=98&amp;d=identicon&amp;r=G 2x, https://0.gravatar.com/avatar/9684db4b35f95b69234d21ef30f588d5739f7246483d6636a479567b8a4871cf?s=147&amp;d=identicon&amp;r=G 3x, https://0.gravatar.com/avatar/9684db4b35f95b69234d21ef30f588d5739f7246483d6636a479567b8a4871cf?s=196&amp;d=identicon&amp;r=G 4x" class="avatar avatar-49 wp-hovercard-attachment grav-hashed grav-hijack" height="49" width="49" decoding="async"><span class="screen-reader-text">Author </span> <a class="url fn n" href="https://thecuriousengineer756614207.wordpress.com/author/thecuriousengineer4120/">Angus Shaw</a></span></span><span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/" rel="bookmark"><time class="entry-date published" datetime="2020-07-15T23:47:49-04:00">July 15, 2020</time><time class="updated" datetime="2020-10-21T10:57:13-04:00">October 21, 2020</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="https://thecuriousengineer756614207.wordpress.com/category/projects/electronics-projects/" rel="category tag">Electronics</a>, <a href="https://thecuriousengineer756614207.wordpress.com/category/guides/" rel="category tag">Guides</a>, <a href="https://thecuriousengineer756614207.wordpress.com/category/projects/" rel="category tag">Projects</a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="https://thecuriousengineer756614207.wordpress.com/tag/3d-printing/" rel="tag">3D printing</a>, <a href="https://thecuriousengineer756614207.wordpress.com/tag/arduino/" rel="tag">Arduino</a>, <a href="https://thecuriousengineer756614207.wordpress.com/tag/engineering/" rel="tag">Engineering</a>, <a href="https://thecuriousengineer756614207.wordpress.com/tag/guides/" rel="tag">Guides</a>, <a href="https://thecuriousengineer756614207.wordpress.com/tag/programming/" rel="tag">Programming</a>, <a href="https://thecuriousengineer756614207.wordpress.com/tag/summer-projects/" rel="tag">Summer Projects</a></span>			</footer><!-- .entry-footer -->
+</article><!-- #post-28 -->
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/#respond" style="display:none;">Cancel reply</a></small></h2><form action="https://thecuriousengineer756614207.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form"><div class="jetpack-comments is-mounted" data-jetpack-comments="{&quot;postId&quot;:28,&quot;loginUrl&quot;:&quot;https://thecuriousengineer756614207.wordpress.com/wp-login.php?redirect_to=https%3A%2F%2Fthecuriousengineer756614207.wordpress.com%2F2020%2F07%2F15%2Fbuild-your-own-stream-deck%2F&quot;,&quot;logoutUrl&quot;:&quot;https://thecuriousengineer756614207.wordpress.com/wp-login.php?action=logout\u0026redirect_to=https%3A%2F%2Fthecuriousengineer756614207.wordpress.com%2F2020%2F07%2F15%2Fbuild-your-own-stream-deck%2F\u0026_wpnonce=19988e8729&quot;,&quot;submit&quot;:{&quot;id&quot;:&quot;submit&quot;,&quot;name&quot;:&quot;submit&quot;,&quot;class&quot;:&quot;submit&quot;,&quot;wrapClass&quot;:&quot;&quot;,&quot;label&quot;:&quot;Comment&quot;},&quot;subscriptions&quot;:[{&quot;name&quot;:&quot;subscribe&quot;,&quot;label&quot;:&quot;Notify me of new comments by email.&quot;,&quot;checked&quot;:false},{&quot;name&quot;:&quot;subscribe_blog&quot;,&quot;label&quot;:&quot;Subscribe to keep up with Better Living Through Engineering.&quot;,&quot;checked&quot;:false}]}"><div class="jetpack-comments__box"><textarea id="comment" name="comment" class="jetpack-comments__textarea" rows="2" required="" maxlength="65525" aria-label="Comment" autocomplete="off" aria-busy="false" placeholder="Write a comment..."></textarea><div class="jetpack-comments__actions"><span class="jetpack-comments__submit is-disabled"><input id="submit" name="submit" type="submit" class="submit" disabled="" value="Comment"></span><span class="jetpack-comments__identity"><a class="jetpack-comments__avatar-link" href="https://wordpress.com/wp-admin/user/profile.php" tabindex="-1" aria-hidden="true"><img class="jetpack-comments__avatar avatar avatar-40 photo wp-hovercard-attachment grav-hashed" src="./Build your own stream deck – Better Living Through Engineering_files/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62(2)" alt="" width="40" height="40"></a><span class="jetpack-comments__profile"><a class="jetpack-comments__name" href="https://wordpress.com/wp-admin/user/profile.php" title="Edit profile">aymanalizahira<span class="jetpack-comments__visually-hidden"> Edit profile</span></a><a class="jetpack-comments__link" href="https://thecuriousengineer756614207.wordpress.com/wp-login.php?action=logout&amp;redirect_to=https%3A%2F%2Fthecuriousengineer756614207.wordpress.com%2F2020%2F07%2F15%2Fbuild-your-own-stream-deck%2F&amp;_wpnonce=19988e8729">Log out</a></span></span></div></div></div><input type="hidden" name="comment_post_ID" value="28" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="362386d9c9"></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>Δ<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="1795612728249"><script>
+document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );
+</script>
+</p><input type="hidden" name="jetpack_comments_form_nonce" value="19194dabd2"><jetpack-comments-dialog><template shadowrootmode="open"></template></jetpack-comments-dialog></form>	</div><!-- #respond -->
+	
+</div><!-- .comments-area -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-next"><a href="https://thecuriousengineer756614207.wordpress.com/2020/08/14/219/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">Next Post</span></a></div></div>
+	</nav>
+	</main><!-- .site-main -->
+
+	
+</div><!-- .content-area -->
+
+
+	<aside id="secondary" class="sidebar widget-area">
+		<section id="text-3" class="widget widget_text"><h2 class="widget-title">ABOUT</h2>			<div class="textwidget"><p>Hi internet person! I’m Angus, an aerospace engineer enthusiastic about movies, building home theaters, PC building, photography, space exploration, rocket propulsion, food and inventing things.</p>
+</div>
+		</section><section id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://thecuriousengineer756614207.wordpress.com/">
+	<label>
+		<span class="screen-reader-text">
+			Search for:		</span>
+		<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">
+		Search	</span></button>
+</form>
+</section><section id="categories-3" class="widget widget_categories"><h2 class="widget-title">Categories</h2><nav aria-label="Categories">
+			<ul>
+					<li class="cat-item cat-item-4890412"><a href="https://thecuriousengineer756614207.wordpress.com/category/projects/electronics-projects/">Electronics</a>
+</li>
+	<li class="cat-item cat-item-320"><a href="https://thecuriousengineer756614207.wordpress.com/category/guides/">Guides</a>
+</li>
+	<li class="cat-item cat-item-2008"><a href="https://thecuriousengineer756614207.wordpress.com/category/projects/">Projects</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://thecuriousengineer756614207.wordpress.com/category/uncategorized/">Uncategorized</a>
+</li>
+			</ul>
+
+			</nav></section><section id="wp_tag_cloud-3" class="widget wp_widget_tag_cloud"><h2 class="widget-title">Tags</h2><ul class="wp-tag-cloud" role="list">
+	<li><a href="https://thecuriousengineer756614207.wordpress.com/tag/3d-printing/" class="tag-cloud-link tag-link-1334084 tag-link-position-1" style="font-size: 1em;">3D printing</a></li>
+	<li><a href="https://thecuriousengineer756614207.wordpress.com/tag/arduino/" class="tag-cloud-link tag-link-134289 tag-link-position-2" style="font-size: 1em;">Arduino</a></li>
+	<li><a href="https://thecuriousengineer756614207.wordpress.com/tag/build-guide/" class="tag-cloud-link tag-link-71436717 tag-link-position-3" style="font-size: 1em;">Build Guide</a></li>
+	<li><a href="https://thecuriousengineer756614207.wordpress.com/tag/engineering/" class="tag-cloud-link tag-link-25393 tag-link-position-4" style="font-size: 1em;">Engineering</a></li>
+	<li><a href="https://thecuriousengineer756614207.wordpress.com/tag/guides/" class="tag-cloud-link tag-link-320 tag-link-position-5" style="font-size: 1em;">Guides</a></li>
+	<li><a href="https://thecuriousengineer756614207.wordpress.com/tag/home-entertainment/" class="tag-cloud-link tag-link-40429 tag-link-position-6" style="font-size: 1em;">Home Entertainment</a></li>
+	<li><a href="https://thecuriousengineer756614207.wordpress.com/tag/home-theater/" class="tag-cloud-link tag-link-6561 tag-link-position-7" style="font-size: 1em;">Home Theater</a></li>
+	<li><a href="https://thecuriousengineer756614207.wordpress.com/tag/programming/" class="tag-cloud-link tag-link-196 tag-link-position-8" style="font-size: 1em;">Programming</a></li>
+	<li><a href="https://thecuriousengineer756614207.wordpress.com/tag/quotes/" class="tag-cloud-link tag-link-755 tag-link-position-9" style="font-size: 1em;">Quotes</a></li>
+	<li><a href="https://thecuriousengineer756614207.wordpress.com/tag/summer-projects/" class="tag-cloud-link tag-link-6966364 tag-link-position-10" style="font-size: 1em;">Summer Projects</a></li>
+</ul>
+</section><section id="top-posts-3" class="widget widget_top-posts"><h2 class="widget-title">Top Posts</h2><ul class="widgets-list-layout no-grav">
+<li><a href="https://thecuriousengineer756614207.wordpress.com/2020/08/14/building-a-pc-in-2020/" title="Building a PC in 2020" class="bump-view" data-bump-view="tp"><img loading="lazy" width="40" height="40" src="./Build your own stream deck – Better Living Through Engineering_files/d85_4041.jpg" srcset="https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/08/d85_4041.jpg?fit=1200%2C800&amp;ssl=1&amp;resize=40%2C40 1x, https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/08/d85_4041.jpg?fit=1200%2C800&amp;ssl=1&amp;resize=60%2C60 1.5x, https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/08/d85_4041.jpg?fit=1200%2C800&amp;ssl=1&amp;resize=80%2C80 2x, https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/08/d85_4041.jpg?fit=1200%2C800&amp;ssl=1&amp;resize=120%2C120 3x, https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/08/d85_4041.jpg?fit=1200%2C800&amp;ssl=1&amp;resize=160%2C160 4x" alt="Building a PC in 2020" data-pin-nopin="true" class="widgets-list-layout-blavatar"></a><div class="widgets-list-layout-links">
+								<a href="https://thecuriousengineer756614207.wordpress.com/2020/08/14/building-a-pc-in-2020/" title="Building a PC in 2020" class="bump-view" data-bump-view="tp">Building a PC in 2020</a>
+							</div>
+							</li><li><a href="https://thecuriousengineer756614207.wordpress.com/2020/08/14/home-sweet-home-theater/" title="Home Sweet Home Theater" class="bump-view" data-bump-view="tp"><img loading="lazy" width="40" height="40" src="./Build your own stream deck – Better Living Through Engineering_files/cinema-theatre-movie-film.jpg" srcset="https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/08/cinema-theatre-movie-film.jpg?resize=40%2C40&amp;ssl=1 1x, https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/08/cinema-theatre-movie-film.jpg?resize=60%2C60&amp;ssl=1 1.5x, https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/08/cinema-theatre-movie-film.jpg?resize=80%2C80&amp;ssl=1 2x, https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/08/cinema-theatre-movie-film.jpg?resize=120%2C120&amp;ssl=1 3x, https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/08/cinema-theatre-movie-film.jpg?resize=160%2C160&amp;ssl=1 4x" alt="Home Sweet Home Theater" data-pin-nopin="true" class="widgets-list-layout-blavatar"></a><div class="widgets-list-layout-links">
+								<a href="https://thecuriousengineer756614207.wordpress.com/2020/08/14/home-sweet-home-theater/" title="Home Sweet Home Theater" class="bump-view" data-bump-view="tp">Home Sweet Home Theater</a>
+							</div>
+							</li><li><a href="https://thecuriousengineer756614207.wordpress.com/2020/08/14/219/" title="&quot;The important thing is not to stop questioning. C…" class="bump-view" data-bump-view="tp"><img loading="lazy" width="40" height="40" src="./Build your own stream deck – Better Living Through Engineering_files/9684db4b35f95b69234d21ef30f588d5739f7246483d6636a479567b8a4871cf(1).png" srcset="https://0.gravatar.com/avatar/9684db4b35f95b69234d21ef30f588d5739f7246483d6636a479567b8a4871cf?s=40&amp;d=identicon&amp;r=G 1x" alt="&quot;The important thing is not to stop questioning. C…" data-pin-nopin="true" class="widgets-list-layout-blavatar wp-hovercard-attachment grav-hashed"></a><div class="widgets-list-layout-links">
+								<a href="https://thecuriousengineer756614207.wordpress.com/2020/08/14/219/" title="&quot;The important thing is not to stop questioning. C…" class="bump-view" data-bump-view="tp">"The important thing is not to stop questioning. C…</a>
+							</div>
+							</li><li><a href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/" title="Build your own stream deck" class="bump-view" data-bump-view="tp" aria-current="page"><img loading="lazy" width="40" height="40" src="./Build your own stream deck – Better Living Through Engineering_files/d85_4129_169(1).jpg" srcset="https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?fit=1200%2C675&amp;ssl=1&amp;resize=40%2C40 1x, https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?fit=1200%2C675&amp;ssl=1&amp;resize=60%2C60 1.5x, https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?fit=1200%2C675&amp;ssl=1&amp;resize=80%2C80 2x, https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?fit=1200%2C675&amp;ssl=1&amp;resize=120%2C120 3x, https://i0.wp.com/thecuriousengineer756614207.wordpress.com/wp-content/uploads/2020/07/d85_4129_169.jpg?fit=1200%2C675&amp;ssl=1&amp;resize=160%2C160 4x" alt="Build your own stream deck" data-pin-nopin="true" class="widgets-list-layout-blavatar"></a><div class="widgets-list-layout-links">
+								<a href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/" title="Build your own stream deck" class="bump-view" data-bump-view="tp" aria-current="page">Build your own stream deck</a>
+							</div>
+							</li></ul>
+</section>	</aside><!-- .sidebar .widget-area -->
+
+		</div><!-- .site-content -->
+
+		<footer id="colophon" class="site-footer">
+							<nav class="main-navigation" aria-label="Footer Primary Menu">
+					<div class="menu-primary-container"><ul id="menu-primary-1" class="primary-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-69"><a href="https://thecuriousengineer756614207.wordpress.com/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-13"><a href="https://thecuriousengineer756614207.wordpress.com/blog/">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="https://thecuriousengineer756614207.wordpress.com/guides/">Guides</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="https://thecuriousengineer756614207.wordpress.com/about/">About</a></li>
+</ul></div>				</nav><!-- .main-navigation -->
+			
+							<nav class="social-navigation" aria-label="Footer Social Links Menu">
+					<div class="menu-social-links-container"><ul id="menu-social-links-1" class="social-links-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a href="https://facebook.com/"><span class="screen-reader-text">Facebook</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="http://twitter.com/"><span class="screen-reader-text">Twitter</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="http://instagram.com/"><span class="screen-reader-text">Instagram</span></a></li>
+</ul></div>				</nav><!-- .social-navigation -->
+			
+			<div class="site-info">
+								<span class="site-title"><a href="https://thecuriousengineer756614207.wordpress.com/" rel="home">Better Living Through Engineering</a></span>
+								<a href="https://wordpress.com/?ref=footer_custom_svg" title="Create a website or blog at WordPress.com" rel="nofollow"><svg style="fill: currentColor; position: relative; top: 1px;" width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="title" role="img">
+				<desc id="title">Create a website or blog at WordPress.com</desc>
+				<path d="M12.5225848,4.97949746 C13.0138466,5.87586309 13.2934037,6.90452431 13.2934037,7.99874074 C13.2934037,10.3205803 12.0351007,12.3476807 10.1640538,13.4385638 L12.0862862,7.88081544 C12.4453251,6.98296834 12.5648813,6.26504621 12.5648813,5.62667922 C12.5648813,5.39497674 12.549622,5.17994084 12.5225848,4.97949746 L12.5225848,4.97949746 Z M7.86730089,5.04801561 C8.24619178,5.02808979 8.58760099,4.98823815 8.58760099,4.98823815 C8.9267139,4.94809022 8.88671369,4.44972248 8.54745263,4.46957423 C8.54745263,4.46957423 7.52803983,4.54957381 6.86996227,4.54957381 C6.25158863,4.54957381 5.21247202,4.46957423 5.21247202,4.46957423 C4.87306282,4.44972248 4.83328483,4.96816418 5.17254589,4.98823815 C5.17254589,4.98823815 5.49358462,5.02808979 5.83269753,5.04801561 L6.81314716,7.73459399 L5.43565839,11.8651647 L3.14394256,5.04801561 C3.52312975,5.02808979 3.86416859,4.98823815 3.86416859,4.98823815 C4.20305928,4.94809022 4.16305906,4.44972248 3.82394616,4.46957423 C3.82394616,4.46957423 2.80475558,4.54957381 2.14660395,4.54957381 C2.02852925,4.54957381 1.88934333,4.54668493 1.74156477,4.54194422 C2.86690406,2.83350881 4.80113651,1.70529256 6.99996296,1.70529256 C8.638342,1.70529256 10.1302017,2.33173369 11.2498373,3.35765419 C11.222726,3.35602457 11.1962815,3.35261718 11.1683554,3.35261718 C10.5501299,3.35261718 10.1114609,3.89113285 10.1114609,4.46957423 C10.1114609,4.98823815 10.4107217,5.42705065 10.7296864,5.94564049 C10.969021,6.36482346 11.248578,6.90326506 11.248578,7.68133501 C11.248578,8.21992476 11.0413918,8.84503256 10.7696866,9.71584277 L10.1417574,11.8132391 L7.86730089,5.04801561 Z M6.99996296,14.2927074 C6.38218192,14.2927074 5.78595654,14.2021153 5.22195356,14.0362644 L7.11048207,8.54925635 L9.04486267,13.8491542 C9.05760348,13.8802652 9.07323319,13.9089317 9.08989995,13.9358945 C8.43574834,14.1661896 7.73285573,14.2927074 6.99996296,14.2927074 L6.99996296,14.2927074 Z M0.706448182,7.99874074 C0.706448182,7.08630113 0.902152921,6.22015756 1.25141403,5.43749503 L4.25357806,13.6627848 C2.15393732,12.6427902 0.706448182,10.4898387 0.706448182,7.99874074 L0.706448182,7.99874074 Z M6.99996296,0.999 C3.14016476,0.999 0,4.13905746 0,7.99874074 C0,11.8585722 3.14016476,14.999 6.99996296,14.999 C10.8596871,14.999 14,11.8585722 14,7.99874074 C14,4.13905746 10.8596871,0.999 6.99996296,0.999 L6.99996296,0.999 Z" id="wordpress-logo-simplified-cmyk" stroke="none" fill="“currentColor”" fill-rule="evenodd"></path>
+			</svg></a>
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+	</div><!-- .site-inner -->
+</div><!-- .site -->
+
+<!--  -->
+<script id="grofiles-cards-js" src="./Build your own stream deck – Better Living Through Engineering_files/hovercards.min.js.download"></script>
+<script id="wpgroho-js-extra">
+var WPGroHo = {"my_hash":"f0a7b007a42100d8970a19944d1de46a"};
+//# sourceURL=wpgroho-js-extra
+</script>
+<script crossorigin="anonymous" type="text/javascript" src="./Build your own stream deck – Better Living Through Engineering_files/wpgroho.js.download"></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init(
+					'body',
+					'#wp-admin-bar-my-account',
+					{
+						i18n: {
+							'Edit your profile →': 'Edit your profile →',
+							'View profile →': 'View profile →',
+							'Contact': 'Contact',
+							'Send money': 'Send money',
+							'Sorry, we are unable to load this Gravatar profile.': 'Sorry, we are unable to load this Gravatar profile.',
+							'Gravatar not found.': 'Gravatar not found.',
+							'Too Many Requests.': 'Too Many Requests.',
+							'Internal Server Error.': 'Internal Server Error.',
+							'Is this you?': 'Is this you?',
+							'Claim your free profile.': 'Claim your free profile.',
+							'Email': 'Email',
+							'Home Phone': 'Home Phone',
+							'Work Phone': 'Work Phone',
+							'Cell Phone': 'Cell Phone',
+							'Contact Form': 'Contact Form',
+							'Calendar': 'Calendar',
+						},
+					}
+				);
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-f0a7b007a42100d8970a19944d1de46a">
+	</div>
+	<div class="grofile-hash-map-d93be0a3bb89d8304a6c1e7bee2dd705">
+	</div>
+	</div>
+		<!-- CCPA [start] -->
+		<script type="text/javascript">
+			( function () {
+
+				var setupPrivacy = function() {
+
+					// Minimal Mozilla Cookie library
+					// https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie/Simple_document.cookie_framework
+					var cookieLib = window.cookieLib = {getItem:function(e){return e&&decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(e).replace(/[\-\.\+\*]/g,"\\$&")+"\\s*\\=\\s*([^;]*).*$)|^.*$"),"$1"))||null},setItem:function(e,o,n,t,r,i){if(!e||/^(?:expires|max\-age|path|domain|secure)$/i.test(e))return!1;var c="";if(n)switch(n.constructor){case Number:c=n===1/0?"; expires=Fri, 31 Dec 9999 23:59:59 GMT":"; max-age="+n;break;case String:c="; expires="+n;break;case Date:c="; expires="+n.toUTCString()}return"rootDomain"!==r&&".rootDomain"!==r||(r=(".rootDomain"===r?".":"")+document.location.hostname.split(".").slice(-2).join(".")),document.cookie=encodeURIComponent(e)+"="+encodeURIComponent(o)+c+(r?"; domain="+r:"")+(t?"; path="+t:"")+(i?"; secure":""),!0}};
+
+					// Implement IAB USP API.
+					window.__uspapi = function( command, version, callback ) {
+
+						// Validate callback.
+						if ( typeof callback !== 'function' ) {
+							return;
+						}
+
+						// Validate the given command.
+						if ( command !== 'getUSPData' || version !== 1 ) {
+							callback( null, false );
+							return;
+						}
+
+						// Check for GPC. If set, override any stored cookie.
+						if ( navigator.globalPrivacyControl ) {
+							callback( { version: 1, uspString: '1YYN' }, true );
+							return;
+						}
+
+						// Check for cookie.
+						var consent = cookieLib.getItem( 'usprivacy' );
+
+						// Invalid cookie.
+						if ( null === consent ) {
+							callback( null, false );
+							return;
+						}
+
+						// Everything checks out. Fire the provided callback with the consent data.
+						callback( { version: 1, uspString: consent }, true );
+					};
+
+					// Initialization.
+					document.addEventListener( 'DOMContentLoaded', function() {
+
+						// Internal functions.
+						var setDefaultOptInCookie = function() {
+							var value = '1YNN';
+							var domain = '.wordpress.com' === location.hostname.slice( -14 ) ? '.rootDomain' : location.hostname;
+							cookieLib.setItem( 'usprivacy', value, 365 * 24 * 60 * 60, '/', domain );
+						};
+
+						var setDefaultOptOutCookie = function() {
+							var value = '1YYN';
+							var domain = '.wordpress.com' === location.hostname.slice( -14 ) ? '.rootDomain' : location.hostname;
+							cookieLib.setItem( 'usprivacy', value, 24 * 60 * 60, '/', domain );
+						};
+
+						var setDefaultNotApplicableCookie = function() {
+							var value = '1---';
+							var domain = '.wordpress.com' === location.hostname.slice( -14 ) ? '.rootDomain' : location.hostname;
+							cookieLib.setItem( 'usprivacy', value, 24 * 60 * 60, '/', domain );
+						};
+
+						var setCcpaAppliesCookie = function( applies ) {
+							var domain = '.wordpress.com' === location.hostname.slice( -14 ) ? '.rootDomain' : location.hostname;
+							cookieLib.setItem( 'ccpa_applies', applies, 24 * 60 * 60, '/', domain );
+						}
+
+						var maybeCallDoNotSellCallback = function() {
+							if ( 'function' === typeof window.doNotSellCallback ) {
+								return window.doNotSellCallback();
+							}
+
+							return false;
+						}
+
+						// Look for usprivacy cookie first.
+						var usprivacyCookie = cookieLib.getItem( 'usprivacy' );
+
+						// Found a usprivacy cookie.
+						if ( null !== usprivacyCookie ) {
+
+							// If the cookie indicates that CCPA does not apply, then bail.
+							if ( '1---' === usprivacyCookie ) {
+								return;
+							}
+
+							// CCPA applies, so call our callback to add Do Not Sell link to the page.
+							maybeCallDoNotSellCallback();
+
+							// We're all done, no more processing needed.
+							return;
+						}
+
+						// We don't have a usprivacy cookie, so check to see if we have a CCPA applies cookie.
+						var ccpaCookie = cookieLib.getItem( 'ccpa_applies' );
+
+						// No CCPA applies cookie found, so we'll need to geolocate if this visitor is from California.
+						// This needs to happen client side because we do not have region geo data in our $SERVER headers,
+						// only country data -- therefore we can't vary cache on the region.
+						if ( null === ccpaCookie ) {
+
+							var request = new XMLHttpRequest();
+							request.open( 'GET', 'https://public-api.wordpress.com/geo/', true );
+
+							request.onreadystatechange = function () {
+								if ( 4 === this.readyState ) {
+									if ( 200 === this.status ) {
+
+										// Got a geo response. Parse out the region data.
+										var data = JSON.parse( this.response );
+										var region      = data.region ? data.region.toLowerCase() : '';
+										var ccpa_applies = ['california', 'colorado', 'connecticut', 'delaware', 'indiana', 'iowa', 'montana', 'new jersey', 'oregon', 'tennessee', 'texas', 'utah', 'virginia'].indexOf( region ) > -1;
+										// Set CCPA applies cookie. This keeps us from having to make a geo request too frequently.
+										setCcpaAppliesCookie( ccpa_applies );
+
+										// Check if CCPA applies to set the proper usprivacy cookie.
+										if ( ccpa_applies ) {
+											if ( maybeCallDoNotSellCallback() ) {
+												// Do Not Sell link added, so set default opt-in.
+												setDefaultOptInCookie();
+											} else {
+												// Failed showing Do Not Sell link as required, so default to opt-OUT just to be safe.
+												setDefaultOptOutCookie();
+											}
+										} else {
+											// CCPA does not apply.
+											setDefaultNotApplicableCookie();
+										}
+									} else {
+										// Could not geo, so let's assume for now that CCPA applies to be safe.
+										setCcpaAppliesCookie( true );
+										if ( maybeCallDoNotSellCallback() ) {
+											// Do Not Sell link added, so set default opt-in.
+											setDefaultOptInCookie();
+										} else {
+											// Failed showing Do Not Sell link as required, so default to opt-OUT just to be safe.
+											setDefaultOptOutCookie();
+										}
+									}
+								}
+							};
+
+							// Send the geo request.
+							request.send();
+						} else {
+							// We found a CCPA applies cookie.
+							if ( ccpaCookie === 'true' ) {
+								if ( maybeCallDoNotSellCallback() ) {
+									// Do Not Sell link added, so set default opt-in.
+									setDefaultOptInCookie();
+								} else {
+									// Failed showing Do Not Sell link as required, so default to opt-OUT just to be safe.
+									setDefaultOptOutCookie();
+								}
+							} else {
+								// CCPA does not apply.
+								setDefaultNotApplicableCookie();
+							}
+						}
+					} );
+				};
+
+				// Kickoff initialization.
+				if ( window.defQueue && defQueue.isLOHP && defQueue.isLOHP === 2020 ) {
+					defQueue.items.push( setupPrivacy );
+				} else {
+					setupPrivacy();
+				}
+
+			} )();
+		</script>
+
+		<!-- CCPA [end] -->
+					<div id="actionbar" dir="ltr" class="actnbr-pub-twentysixteen" role="region" aria-label="Site actions">
+			<span class="actnbr-live" aria-live="polite"></span>
+			<ul>
+										<li class="actnbr-btn">
+							<a class="actnbr-action actnbr-actn-comment" href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/#respond">
+								<svg class="actnbr-icon actnbr-icon-comment" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="currentColor"><path d="M18 4H6c-1.1 0-2 .9-2 2v12.9c0 .6.5 1.1 1.1 1.1.3 0 .5-.1.8-.3L8.5 17H18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm.5 11c0 .3-.2.5-.5.5H7.9l-2.4 2.4V6c0-.3.2-.5.5-.5h12c.3 0 .5.2.5.5v9z"></path></svg>								<span>Comment							</span>
+							</a>
+						</li>
+											<li class="actnbr-btn">
+							<a class="actnbr-action actnbr-actn-reblog" href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/" role="button">
+								<svg class="actnbr-icon actnbr-icon-reusable-block" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="currentColor"><path d="M7 7.2h8.2L13.5 9l1.1 1.1 3.6-3.6-3.5-4-1.1 1 1.9 2.3H7c-.9 0-1.7.3-2.3.9-1.4 1.5-1.4 4.2-1.4 5.6v.2h1.5v-.3c0-1.1 0-3.5 1-4.5.3-.3.7-.5 1.2-.5zm13.8 4V11h-1.5v.3c0 1.1 0 3.5-1 4.5-.3.3-.7.5-1.3.5H8.8l1.7-1.7-1.1-1.1L5.9 17l3.5 4 1.1-1-1.9-2.3H17c.9 0 1.7-.3 2.3-.9 1.5-1.4 1.5-4.2 1.5-5.6z"></path></svg><span>Reblog</span>
+							</a>
+						</li>
+											<li class="actnbr-btn actnbr-hidden">
+										<a class="actnbr-action actnbr-actn-follow " href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/" role="button" aria-haspopup="dialog" aria-expanded="false">
+				<svg class="actnbr-icon actnbr-icon-bell" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 11.5c0 1.353.17 2.368.976 3 .266.209.602.376 1.024.5v1H5v-1c.422-.124.757-.291 1.024-.5.806-.632.976-1.647.976-3V9c0-2.8 2.2-5 5-5s5 2.2 5 5v2.5ZM15.5 9v2.5c0 .93.066 1.98.515 2.897l.053.103H7.932a4.018 4.018 0 0 0 .053-.103c.449-.917.515-1.967.515-2.897V9c0-1.972 1.528-3.5 3.5-3.5s3.5 1.528 3.5 3.5Zm-5.492 9.008c0-.176.023-.346.065-.508h3.854A1.996 1.996 0 0 1 12 20c-1.1 0-1.992-.892-1.992-1.992Z"></path></svg>				<span>Subscribe</span>
+			</a>
+			<a class="actnbr-action actnbr-actn-following  no-display" href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/" role="button">
+				<svg class="actnbr-icon actnbr-icon-check" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="fill: none" stroke="currentColor" stroke-width="1.5"><path d="M7 12L10 15L17 8" vector-effect="non-scaling-stroke"></path></svg>				<span>Subscribed</span>
+			</a>
+																	<div class="actnbr-undo no-display">
+									<span>
+										Unsubscribed from Better Living Through Engineering.									</span>
+									<button type="button" class="actnbr-undo__button">Undo</button>
+								</div>
+														<div class="actnbr-popover actnbr-panel actnbr-notice" id="follow-bubble" role="dialog" aria-label="Subscribe to Better Living Through Engineering">
+								<div class="actnbr-follow-bubble">
+								<div class="actnbr-panel__group"><a class="actnbr-menu__item actnbr-sitename" href="https://thecuriousengineer756614207.wordpress.com/"><img loading="lazy" alt="" src="./Build your own stream deck – Better Living Through Engineering_files/wpcom-gray-white.png" srcset="https://s-ssl.wordpress.com/i/logo/wpcom-gray-white.png 1x" class="avatar avatar-50" height="50" width="50"><span class="actnbr-menu__label">Better Living Through Engineering</span></a></div>																	<div class="actnbr-panel__group actnbr-site-settings">
+										<div class="actnbr-message no-display" aria-live="polite"></div>
+										<div class="actnbr-site-settings__setting">
+											<span class="actnbr-site-settings__toggle">
+												<input class="actnbr-site-settings__toggle__input" id="toggle-input-notify-posts" type="checkbox" role="switch">
+												<span class="actnbr-site-settings__toggle__track"></span>
+												<span class="actnbr-site-settings__toggle__thumb"></span>
+											</span>
+											<label for="toggle-input-notify-posts" class="components-toggle-control__label">
+												Notify me of new posts											</label>
+										</div>
+										<p class="actnbr-site-settings__details">
+											Receive web and mobile notifications for new posts from this site.										</p>
+										<div class="actnbr-site-settings__setting">
+											<span class="actnbr-site-settings__toggle">
+												<input class="actnbr-site-settings__toggle__input" id="toggle-input-email-posts" type="checkbox" role="switch">
+												<span class="actnbr-site-settings__toggle__track"></span>
+												<span class="actnbr-site-settings__toggle__thumb"></span>
+											</span>
+											<label for="toggle-input-email-posts" class="components-toggle-control__label">
+												Email me new posts											</label>
+										</div>
+										<div class="actnbr-site-settings__details" id="email-new-posts-details">
+											<ul class="segmented-control" role="radiogroup" aria-label="Email frequency">
+												<li class="segmented-control__item">
+													<a class="segmented-control__link frequency-instantly" data-frequency="instantly" role="radio" aria-checked="false" tabindex="0">Instantly</a>
+												</li>
+												<li class="segmented-control__item">
+													<a class="segmented-control__link frequency-daily" data-frequency="daily" role="radio" aria-checked="false" tabindex="0">Daily</a>
+												</li>
+												<li class="segmented-control__item">
+													<a class="segmented-control__link frequency-weekly" data-frequency="weekly" role="radio" aria-checked="false" tabindex="0">Weekly</a>
+												</li>
+											</ul>
+										</div>
+										<div class="actnbr-site-settings__setting">
+											<span class="actnbr-site-settings__toggle">
+												<input class="actnbr-site-settings__toggle__input" id="toggle-input-email-comments" type="checkbox" role="switch">
+												<span class="actnbr-site-settings__toggle__track"></span>
+												<span class="actnbr-site-settings__toggle__thumb"></span>
+											</span>
+											<label for="toggle-input-email-comments" class="components-toggle-control__label">
+												Email me new comments											</label>
+										</div>
+									</div>
+																	</div>
+							</div>
+						</li>
+									<li class="actnbr-ellipsis actnbr-hidden">
+					<button type="button" class="actnbr-more-toggle" aria-haspopup="true" aria-expanded="false" aria-label="More options">
+						<svg class="actnbr-icon actnbr-icon-more-horizontal" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="currentColor"><path d="M11 13h2v-2h-2v2zm-6 0h2v-2H5v2zm12-2v2h2v-2h-2z"></path></svg>					</button>
+					<div class="actnbr-popover actnbr-menu" role="menu" aria-label="Site options">
+						<div class="actnbr-menu__group" role="group"><a role="menuitem" class="actnbr-menu__item actnbr-sitename" href="https://thecuriousengineer756614207.wordpress.com/"><img loading="lazy" alt="" src="./Build your own stream deck – Better Living Through Engineering_files/wpcom-gray-white.png" srcset="https://s-ssl.wordpress.com/i/logo/wpcom-gray-white.png 1x" class="avatar avatar-50" height="50" width="50"><span class="actnbr-menu__label">Better Living Through Engineering</span></a></div><div class="actnbr-menu__group" role="group"><a role="menuitem" class="actnbr-menu__item actnbr-shortlink" href="https://wp.me/pccoyy-s"><span class="actnbr-menu__label actnbr-shortlink__text">Copy shortlink</span><span class="actnbr-menu__icon actnbr-shortlink__icon"><svg class="actnbr-icon actnbr-icon-copy" width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 4.5h11a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5ZM3 5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5Zm17 3v10.75c0 .69-.56 1.25-1.25 1.25H6v1.5h12.75a2.75 2.75 0 0 0 2.75-2.75V8H20Z"></path></svg></span><span class="actnbr-menu__icon actnbr-shortlink__icon-copied"><svg class="actnbr-icon actnbr-icon-check" width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="fill: none" stroke="currentColor" stroke-width="1.5"><path d="M7 12L10 15L17 8" vector-effect="non-scaling-stroke"></path></svg></span></a><a role="menuitem" class="actnbr-menu__item actnbr-reader" href="https://wordpress.com/reader/blogs/180270366/posts/28"><span class="actnbr-menu__label">View post in Reader</span></a><a role="menuitem" class="actnbr-menu__item actnbr-theme" href="https://wordpress.com/theme/twentysixteen/"><span class="actnbr-menu__label">Get theme: Twenty Sixteen</span></a></div><div class="actnbr-menu__group" role="group"><a role="menuitem" class="actnbr-menu__item actnbr-follows" href="https://wordpress.com/read/subscriptions?s=thecuriousengineer756614207.wordpress.com"><span class="actnbr-menu__label">Manage subscriptions</span></a></div><div class="actnbr-menu__group" role="group"><a role="menuitem" class="actnbr-menu__item flb-report" href="https://wordpress.com/abuse/?report_url=https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/" target="_blank" rel="noopener noreferrer"><span class="actnbr-menu__label">Report this content</span><span class="actnbr-menu__icon"><svg class="actnbr-icon actnbr-icon-external" width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="currentColor"><path d="M19.5 4.5h-7V6h4.44l-5.97 5.97 1.06 1.06L18 7.06v4.44h1.5v-7Zm-13 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3H17v3a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h3V5.5h-3Z"></path></svg></span></a></div><div class="actnbr-menu__group" role="group"><a role="menuitem" class="actnbr-menu__item actnbr-fold" href="https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/"><span class="actnbr-menu__label">Collapse this bar</span></a></div>					</div>
+				</li>
+			</ul>
+		</div>
+		<script>
+window.addEventListener( "DOMContentLoaded", function () {
+				var link = document.createElement( "link" );
+				link.href = "\/wp-content\/mu-plugins\/jetpack-plugin\/sun\/jetpack_vendor\/automattic\/jetpack-newsletter\/src\/..\/build\/action-bar.css?ver=53f8c839663979c89a1c";
+				link.rel = "stylesheet";
+				document.head.appendChild( link );
+
+				var script = document.createElement( "script" );
+				script.src = "\/wp-content\/mu-plugins\/jetpack-plugin\/sun\/jetpack_vendor\/automattic\/jetpack-newsletter\/src\/..\/build\/action-bar.js?ver=53f8c839663979c89a1c";
+				document.body.appendChild( script );
+			} );
+</script>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https://thecuriousengineer756614207.wordpress.com/2020/07/15/build-your-own-stream-deck/":28};
+	</script>
+				
+	<script type="text/javascript">
+		(function () {
+			var wpcom_reblog = {
+				source: 'toolbar',
+
+				toggle_reblog_box_flair: function (obj_id, post_id) {
+
+					// Go to site selector. This will redirect to their blog if they only have one.
+					const postEndpoint = `https://wordpress.com/post`;
+
+					// Ideally we would use the permalink here, but fortunately this will be replaced with the 
+					// post permalink in the editor.
+					const originalURL = `${ document.location.href }?page_id=${ post_id }`; 
+					
+					const url =
+						postEndpoint +
+						'?url=' +
+						encodeURIComponent( originalURL ) +
+						'&is_post_share=true' +
+						'&v=5';
+
+					const redirect = function () {
+						if (
+							! window.open( url, '_blank' )
+						) {
+							location.href = url;
+						}
+					};
+
+					if ( /Firefox/.test( navigator.userAgent ) ) {
+						setTimeout( redirect, 0 );
+					} else {
+						redirect();
+					}
+				},
+			};
+
+			window.wpcom_reblog = wpcom_reblog;
+		})();
+	</script>
+<script crossorigin="anonymous" type="text/javascript" src="./Build your own stream deck – Better Living Through Engineering_files/saved_resource(7)"></script><div class="widget widget_eu_cookie_law_widget" style="display: block;">
+<div class="hide-on-button ads-active" data-hide-timeout="30" data-consent-expiration="180" id="eu-cookie-law" style="display: block;">
+	<form method="post">
+		<input type="submit" value="Close and accept" class="accept">
+
+		Privacy &amp; Cookies: This site uses cookies. By continuing to use this website, you agree to their use. <br>
+To find out more, including how to control cookies, see here:
+				<a href="https://automattic.com/cookies/" rel="nofollow">
+			Cookie Policy		</a>
+ </form>
+</div>
+</div>
+<script data-wp-strategy="defer" defer="" id="wpcom-marketing-bar-js" src="./Build your own stream deck – Better Living Through Engineering_files/marketing-bar.js.download"></script>
+<script data-wp-strategy="defer" defer="" id="wpcom-admin-bar-js" src="./Build your own stream deck – Better Living Through Engineering_files/wpcom-admin-bar.js.download"></script>
+<script id="comment-like-js-extra">
+var comment_like_text = {"loading":"Loading...","swipeUrl":"https://s0.wp.com/wp-content/mu-plugins/comment-likes/js/lib/swipe.js?m=1382645497i&amp;ver=20131008"};
+//# sourceURL=comment-like-js-extra
+</script>
+<script id="coblocks-loader-js-extra">
+var wpcom_coblocks_js = {"coblocks_masonry_js":"https://s0.wp.com/wp-content/plugins/coblocks/2.18.1-simple-rev.4/dist/js/coblocks-masonry.min.js?m=1681832297i","coblocks_lightbox_js":"https://s0.wp.com/wp-content/plugins/coblocks/2.18.1-simple-rev.4/dist/js/coblocks-lightbox.min.js?m=1681832297i","jquery_core_js":"/wp-includes/js/jquery/jquery.min.js","jquery_migrate_js":"/wp-includes/js/jquery/jquery-migrate.min.js","masonry_js":"/wp-includes/js/masonry.min.js","imagesloaded_js":"/wp-includes/js/imagesloaded.min.js"};
+var coblocksLigthboxData = {"closeLabel":"Close Gallery","leftLabel":"Previous","rightLabel":"Next"};
+//# sourceURL=coblocks-loader-js-extra
+</script>
+<script id="twentysixteen-script-js-extra">
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+//# sourceURL=twentysixteen-script-js-extra
+</script>
+<script crossorigin="anonymous" type="text/javascript" src="./Build your own stream deck – Better Living Through Engineering_files/saved_resource(8)"></script>
+<script id="jetpack-comments-js-before">
+window.JetpackComments = {"version":"0.9.2","styleUrl":"/wp-content/mu-plugins/jetpack-mu-wpcom-plugin/sun/jetpack_vendor/automattic/jetpack-comments/build/comments.css?m=1794418792i\u0026minify=false\u0026ver=d21f50099c7017d45a34-1794418792","requireNameEmail":true,"mustLogIn":false,"site":{"name":"Better Living Through Engineering","iconUrl":""},"manageSubscriptionsUrl":"https://subscribe.wordpress.com/?site=thecuriousengineer756614207.wordpress.com","tracks":{"platform":"simple"},"strings":{"reply":"Reply","commentLabel":"Comment","replyLabel":"Reply","placeholder":"Write a comment...","replyPlaceholder":"Write a reply...","name":"Name","email":"Email","emailHint":"Address never made public","emailHasAccount":"That email belongs to a WordPress.com account. Log in with WordPress.com to use it, or enter a different email.","website":"Website (optional)","intro":"Enter your name and email to comment.","continueAsGuest":"Continue as a guest","postWithoutSaving":"No, thanks. I just want to post a comment","save":"Save","saveDetails":"Save my name, email, and website in this browser for the next time I comment.","close":"Close","manageSubscriptions":"Manage subscription","mustLogIn":"You must be logged in to post a comment.","logIn":"Log in","logInWithWordPress":"Log in with WordPress.com","logOut":"Log out","change":"Change","editProfile":"Edit profile","addYourName":"Add your name","cancel":"Cancel","signInFailed":"We could not sign you in. Please try again.","tooLong":"This comment is too long to post. Shorten it to send it.","signInRateLimited":"Too many sign-in attempts. Please wait a moment and try again."},"assetsUrl":"https://s0.wp.com/wp-content/mu-plugins/jetpack-mu-wpcom-plugin/sun/jetpack_vendor/automattic/jetpack-comments/build/","loaderUrl":"https://s0.wp.com/wp-content/mu-plugins/jetpack-mu-wpcom-plugin/sun/jetpack_vendor/automattic/jetpack-comments/build/editor-loader.js?m=1795193423i&amp;minify=false\u0026ver=34577d80df19df0dfccb","maxLength":65525,"blocks":true,"editorLocale":{"block title\u0004Paragraph":["Paragraph"],"block title\u0004List":["List"],"block title\u0004List Item":["List Item"],"block title\u0004Quote":["Quote"],"block title\u0004Code":["Code"],"block title\u0004Embed":["Embed"],"block title\u0004Image":["Image"]},"editor":{"blockTools":"Block tools","addBlock":"Add block","embedUrl":"https://public-api.wordpress.com/wpcom/v2/sites/180270366/comments/embed","images":true,"imageError":"This image could not be loaded. Check its URL and try again."},"isLoggedIn":true,"avatarUrl":"https://secure.gravatar.com/avatar/dad28df1599ab8094c435adf1d1986d3a1a1cd088e63da21b04d344e90e93e62?s=80\u0026d=identicon\u0026r=g","commenter":{"author":"aymanalizahira","email":"aymanalizahira@gmail.com","url":""},"user":{"name":"aymanalizahira","editProfileUrl":"https://wordpress.com/wp-admin/user/profile.php"},"identity":{"blogId":180270366,"canSignIn":false,"connect":null,"connectUrl":"https://public-api.wordpress.com/wpcom/v2/sites/180270366/comments/identity/connect","emailUrl":"https://public-api.wordpress.com/wpcom/v2/sites/180270366/comments/identity/email","origin":"https://public-api.wordpress.com","codeField":"jetpack_comment_identity_code","passportField":"jetpack_comment_identity_passport","displayCookie":"jetpack_comment_identity_display","cookieHash":"653166773dc88127bd3afe0b6dfe5ea7","cookiePath":"/","cookieDomain":".wordpress.com","defaultAvatar":"https://0.gravatar.com/avatar/?s=80\u0026d=identicon\u0026forcedefault=y\u0026r=G","logoutUrl":"/wp-admin/admin-ajax.php","logoutAction":"jetpack_comments_identity_logout"}};(function(){function n(){Array.prototype.forEach.call(document.forms,function(f){var i;if(f.querySelector(".jetpack-comments")&&!f.querySelector('[name="jetpack_comments_form_nonce"]')){i=document.createElement("input");i.type="hidden";i.name="jetpack_comments_form_nonce";i.value="19194dabd2";f.appendChild(i);}});}n();document.addEventListener("DOMContentLoaded",n);})();window.addEventListener("load",function(){Array.prototype.forEach.call(document.querySelectorAll(".jetpack-comments"),function(e){if(!/\bis-(mounted|plain)\b/.test(e.className)){e.className+=" is-plain";}});});
+//# sourceURL=jetpack-comments-js-before
+</script>
+<script data-wp-strategy="defer" defer="" id="jetpack-comments-js" src="./Build your own stream deck – Better Living Through Engineering_files/comments.js.download"></script>
+<script id="sharing-js-js-extra">
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+//# sourceURL=sharing-js-js-extra
+</script>
+<script crossorigin="anonymous" type="text/javascript" src="./Build your own stream deck – Better Living Through Engineering_files/saved_resource(9)"></script>
+<script id="sharing-js-js-after">
+window.WPCOM_sharing_popups = window.WPCOM_sharing_popups || {};
+window.WPCOM_sharing_popups[ "twitter" ] = "menubar=1,resizable=1,width=600,height=350";
+window.WPCOM_sharing_popups = window.WPCOM_sharing_popups || {};
+window.WPCOM_sharing_popups[ "facebook" ] = "menubar=1,resizable=1,width=600,height=400";
+//# sourceURL=sharing-js-js-after
+</script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/","ext":".png","svgUrl":"https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?m=1794848738i&ver=7.2-beta4-65336"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const o=JSON.parse(t.text),s=(window._wpemojiSettings=o,"wpEmojiSettingsSupports"),i=["flag","emoji"];function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function f(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\udec8")}}function l(e,t,n,r){let a;if(!(a=("undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0})))throw new Error("Unable to obtain a 2D context for the emoji support tests.");a.textBaseline="top",a.font="600 32px Arial";const o={};return e.forEach(e=>{o[e]=t(a,e,n,r)}),o}function g(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}o.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{var e=function(){try{var e=sessionStorage.getItem(s);if(null===e)return null;var t=JSON.parse(e);if("object"==typeof t&&"number"==typeof t.timestamp&&(new Date).valueOf()<t.timestamp+604800&&"object"==typeof t.supportTests)return t.supportTests}catch(e){}return null}();if(e)t(e);else{if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&"function"==typeof URL.createObjectURL&&"undefined"!=typeof Blob)try{var n="postMessage("+l.toString()+"("+[JSON.stringify(i),u.toString(),p.toString(),f.toString()].join(",")+"));",r=new Blob([n],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{c(e.data),a.terminate(),t(e.data)})}catch(e){}e=l(i,u,p,f);c(e),t(e)}}).then(e=>{for(const a in e){var t=a,n=e[t];o.supports[t]=n,o.supports.everything=o.supports.everything&&n,"flag"!==t&&(o.supports.everythingExceptFlag=o.supports.everythingExceptFlag&&n)}var r;o.supports.everythingExceptFlag=o.supports.everythingExceptFlag&&!o.supports.flag,o.supports.everything||((r=o.source||{}).concatemoji?g(r.concatemoji):r.wpemoji&&r.twemoji&&(g(r.twemoji),g(r.wpemoji)))});
+//# sourceURL=/wp-includes/js/wp-emoji-loader.min.js
+</script>
+	<iframe src="./Build your own stream deck – Better Living Through Engineering_files/master.html" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+	<div id="likes-other-gravatars" role="dialog" aria-hidden="true" tabindex="-1"><div class="likes-text"><span>%d</span></div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+	<script src="./Build your own stream deck – Better Living Through Engineering_files/w.js.download" defer=""></script> <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['identifyUser', 286944628, 'aymanalizahira']);
+_tkq.push(['storeContext', {'blog_id':'180270366','blog_tz':'-5','user_lang':'en','blog_lang':'en'}]);
+		// Prevent sending pageview tracking from WP-Admin pages.
+		_stq.push(['view', {'blog':'180270366','v':'wpcom','tz':'-5','user_id':'286944628','post':'28','subd':'thecuriousengineer756614207'}]);
+		_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdWtpP0NsWnVkPS9sL0ViLndld3AvT3pYfCUzQ00ldWhGMUNndEJtbGY4Y1RybzVbYn5+cXlQQnU/N1hhNiV1Mnh2RktDOWE9MUpGMlcyfFRBWl1PZUFLYjFwLWZ4UE9jRHh8dnBpMnpfdnc2dGtkW2U4bVUwX2ZTeFtoWHJ6Lk91RXc2TzdwZENpdVFnQThvOSZYcnkldmwuZjZwRzJuM3h5VHNoekdZS2pVRmN5LyxqVT91SiVtL3BlQkd0MCUtSD1wQXhfUS95R3xXUDM1VDhuNlFGaEVaWUdTZGlUMDRLeURwdixKVngtcDI5R3RQb1RoTnc2UnwmJTBZcF8lalFTc3Z+R3EuOEFSVkhlTjBhWzhIYk1oZjJzWEt2fEddOXh+eGg5SERDL2dsdDY1aS58d0w2ODRPTS1iYXp+dkdjcFNpby9aaG98NEJEMzdURU5ubElbT1hIUk5IZ2tddnNkdWR4amRCWm5UNkEwOHgwTkdwLFNrM3xia1hyblJhbHdPckdpTzNKaktM'}]);
+_stq.push([ 'clickTrackerInit', '180270366', '28' ]);
+</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+<meta id="bilmur" property="bilmur:data" content="" data-provider="wordpress.com" data-service="simple" data-site-tz="America/New_York" data-custom-props="{&quot;font_type&quot;:&quot;jetpack_global_styles&quot;,&quot;logged_in&quot;:&quot;1&quot;,&quot;wptheme&quot;:&quot;pub\/twentysixteen&quot;,&quot;wptheme_is_block&quot;:&quot;0&quot;}">
+		<script defer="" src="./Build your own stream deck – Better Living Through Engineering_files/bilmur.min.js.download"></script> 	<div id="marketingbar" class="marketing-bar noskim" data-event-properties="{&quot;is_current_user_blog_owner&quot;:false}"><div class="marketing-bar-text">Design a site like this with WordPress.com</div><a class="marketing-bar-button" href="https://wordpress.com/start/?ref=marketing_bar">Get started</a><a class="marketing-bar-link" tabindex="-1" aria-label="Create your website at WordPress.com" href="https://wordpress.com/start/?ref=marketing_bar"></a></div>
+
+<style>img#wpstats {
+			position: absolute !important;
+			clip: rect(0, 0, 0, 0);
+			padding: 0 !important;
+			border: 0 !important;
+			height: 0 !important;
+			width: 0 !important;
+			overflow: hidden;
+		}</style><img src="./Build your own stream deck – Better Living Through Engineering_files/g.gif" alt="" id="wpstats"><iframe style="display:none" class="jetpack-notes-cookie-check" src="./Build your own stream deck – Better Living Through Engineering_files/saved_resource(11).html"></iframe><iframe name="__tcfapiLocator" style="display: none;" src="./Build your own stream deck – Better Living Through Engineering_files/saved_resource(12).html"></iframe><div class="comment-likes-overlay" style="display: none;"></div><script src="./Build your own stream deck – Better Living Through Engineering_files/action-bar.js.download"></script></body></html>
